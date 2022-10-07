@@ -2,6 +2,9 @@ nav {
     background-color: #c8e5ff;
 }
 
+table {
+    border-spacing: 4px;
+}
 
 a:link{color:inherit}
 a:visited{color:inherit}
