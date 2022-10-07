@@ -2,14 +2,11 @@ nav {
     background-color: #c8e5ff;
 }
 
-table {
-    border-spacing: 4px;
-}
-
-table td {
-    background-color: #9abaff;
-    padding: 2px;
-}
+table, th, td {
+    border: 1px solid;
+    padding: 10px;
+    background-color: #c8e5ff;
+  }
 
 a:link{color:inherit}
 a:visited{color:inherit}
