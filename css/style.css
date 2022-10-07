@@ -6,6 +6,11 @@ table {
     border-spacing: 4px;
 }
 
+table td {
+    background-color: transparent;
+    padding: 2px;
+}
+
 a:link{color:inherit}
 a:visited{color:inherit}
 a:hover{color:inherit}
