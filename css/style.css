@@ -3,12 +3,11 @@ nav {
 }
 
 table {
-    
-    background-color: rgb(154, 186, 255);
     border-spacing: 4px;
 }
 
 table td {
+    background-color: #9abaff;
     padding: 2px;
 }
 
