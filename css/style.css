@@ -67,7 +67,7 @@ nav a:active{
     grid-template-columns: 1fr 1fr;
 }
 
-figure {
+.container figure {
     grid-column: span 1;
     grid-row: span 1;
     display: flex;
