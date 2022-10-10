@@ -43,6 +43,10 @@ nav a {
     text-decoration: none;
 }
 
+nav .active a {
+    border-bottom: 2px solid blue;
+}
+
 @keyframes colorChange {
     0% {
         color: blue;
@@ -59,7 +63,7 @@ nav a {
 
 nav a:hover{
     color: blue;
-    animation: colorChange 5s linear infinite;
+    animation: colorChange 1s linear infinite;
 }
 
 nav a:active{
