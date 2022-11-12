@@ -4,10 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/favicon.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/html5reset.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <title>Home</title>
-
+        <script src="https://kit.fontawesome.com/6bfcf705b3.js" crossorigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -17,38 +22,30 @@
         </script>
     </head>
 
-    <body>
+    <body id="grid_layout">
         <header>
             <nav>
                 <ul>
-                    <li class="logo">
-                        <img alt="Jiangwen" src="img/jiangwen.png">
-                    </li>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="films.html">Films</a></li>
-                    <li><a href="awards.html">Awards</a></li>
-                    <li><a href="moreInfo.html">More Info</a></li>
+                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li><a href="films.html">FILMS</a></li>
+                    <li><a href="awards.html">AWARDS</a></li>
+                    <li><a href="moreInfo.html">MORE</a></li>
                 </ul>
             </nav>
         </header>
 
-        <main>
-            <h1>intro</h1>
-            <p>"一个导演，无论他如何标榜自己，其实就干了一件事：他就是拍了一部他自己想看的电影。" ——姜文</p>
-            <p>"A director, no matter how he advertises himself, has actually done one thing: he just made a movie he wanted to see. ——Jiang Wen"</p>
-            <figure>
-                <img alt="Jiangwen" src="img/jiangwen.png" width="500">
-                <figcaption>Jinag, Wen</figcaption>
-            </figure>
-            <p>
-                "Jiang Wen (born 5 January 1963) is a Chinese film actor, screenwriter, and director. As a director, he is sometimes grouped with the "Sixth Generation" that emerged in the 1990s. Jiang is also well known internationally as an actor, having starred with Gong Li in Zhang Yimou's debut film Red Sorghum (1986), and more recently as Baze Malbus in the Star Wars film Rogue One (2016). He is the older brother of fellow actor Jiang Wu."
-            </p>
-            <p>Wikimedia Foundation. (2022, August 16). Jiang Wen. Wikipedia. Retrieved September 16, 2022, from <a href="https://en.wikipedia.org/wiki/Jiang_Wen">https://en.wikipedia.org/wiki/Jiang_Wen</a></p>
-
+        <main id="intro">
+            <p id="quote_cn">"我为观众提供的绝不是白开水，我要造酒，然后与大家在影院同醉。" <br>——姜文</p>
+            <p id="quote_en">"What I provide to the audience is never plain water. I want to make wine and get drunk with everyone in the theater. <br>——Jiang Wen"</p>
+            <img alt="Jiangwen" src="img/jiangwen.png" id="jiangwen">
         </main>
 
+        <aside></aside>
+
         <footer>
-            &copy; 2022
+            <a href="https://en.wikipedia.org/wiki/Jiang_Wen" target="_blank"><i class="fa-brands fa-wikipedia-w"></i></a>
+            <a href="https://weibo.com/u/6474990374" target="_blank"><i class="fa-brands fa-weibo"></i></a>
+            <a href="https://www.youtube.com/hashtag/%E5%A7%9C%E6%96%87" target="_blank"><i class="fa-brands fa-youtube"></i></a>
         </footer>
     </body>
 </html>

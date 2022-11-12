@@ -1,11 +1,20 @@
 nav {
-    background-color: #c8e5ff;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    z-index: 100;
+    background: rgba(0,0,0,0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(10px);
+    color: rgba(200, 229, 255, 0.8);
 }
 
 table, th, td {
     border: 1px solid;
     padding: 10px;
-    background-color: #c8e5ff;
+    background-color: rgb(200, 229, 255);
   }
 
 a:link{color:inherit}
@@ -30,47 +39,50 @@ nav img {
 
 nav ul{
     display: flex;
-    padding: 8px;
+    width: 100%;
     align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 nav li {
-    margin-right: 20px;
+    width: 80px;
 }
 
 nav a {
-    font-size: 18px;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
     text-decoration: none;
 }
 
-nav .active a {
-    border-bottom: 2px solid blue;
+nav .active {
+    color: rgba(200, 229, 255, 0.8);
+    text-shadow: 0px 0px 8px rgba(200, 229, 255, 1);
+    font-weight: 600;
 }
 
-@keyframes colorChange {
+@keyframes text_glow {
     0% {
-        color: blue;
+        color: rgba(200, 229, 255, 0.8);
     }
-
-    33% {
-        color: green;
-    }
-
-    66% {
-        color: red;
+    100% {
+        color: rgba(200, 229, 255, 1);
+        text-shadow: 0px 0px 6px rgba(200, 229, 255, 1)
     }
 }
 
 nav a:hover{
-    color: blue;
-    animation: colorChange 1s linear infinite;
-}
-
-nav a:active{
-    border-bottom: 2px solid black;
+    animation: text_glow 1s ease-in-out alternate infinite;
 }
 
 .container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* grid layout */
+/* .container {
     margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,7 +96,7 @@ nav a:active{
     justify-content: center;
     overflow: hidden;
     border: 2px solid white;
-}
+} */
 
 .container img {
     width: 100%;
@@ -92,10 +104,96 @@ nav a:active{
     object-fit: cover;
     object-position: 50% 50%;
     box-sizing: border-box;
-    transition: 1s ease-in-out;
+    transition: 0.6s ease-in-out;
+    cursor: pointer;
 }
 
 .container img:hover {
     transform: scale(1.1);
 }
 
+
+#grid_layout {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 50px 70vw 1fr 60px;
+    background-color: black;
+}
+
+#grid_layout header {
+    grid-row: 1 / span 1;
+}
+
+#grid_layout main {
+    grid-row: 2 / span 1;
+}
+
+#grid_layout aside {
+    grid-row: 3 / span 1;
+    background-image: url("../img/jiangwen.png");
+    background-size: 20%;
+    filter: blur(4px) brightness(0.8);
+}
+
+#grid_layout footer {
+    grid-row: 4 / span 1;
+    border-top: 1px solid white;
+    color:rgba(200, 229, 255, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 24px;
+}
+
+
+#intro {
+    display: flex;
+    position: relative;
+    align-items: flex-end;    
+    justify-content: flex-end;
+    background-image: url("../img/background.jpg");
+    height: 70vw;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#jiangwen {
+    position: relative;
+    height: 120%;
+    animation: flyin 1s ease;
+}
+
+#quote_cn {
+    color: rgba(200, 229, 255, 1);
+    position: absolute;
+    margin: 0 40% 0 6%;
+    top: 16%;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: end;
+    font-family: 'Ma Shan Zheng', cursive;
+    z-index: 10;
+}
+
+#quote_en {
+    color: rgba(200, 229, 255, 1);
+    position: absolute;
+    margin: 0 40% 0 6%;
+    top: calc(16% + 70px);
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: end;
+    font-family: 'Courgette', cursive;
+    z-index: 10;
+}
+
+@keyframes flyin {
+    from{ left: 200px;}
+    to {left: 0}
+}
+
+@media (prefers-reduced-motion) {
+    #jiangwen {
+        animation: none;
+    }
+}
