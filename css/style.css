@@ -31,6 +31,10 @@ a:hover{color:inherit}
     margin: 0 16px 0 8px;
 }
 
+header {
+    height: 50px;
+}
+
 nav img {
     width: 100%;
     height: 100%;
@@ -50,6 +54,7 @@ nav li {
 }
 
 nav a {
+    user-select: none;
     font-family: 'Cinzel', serif;
     font-size: 16px;
     text-decoration: none;
@@ -76,9 +81,31 @@ nav a:hover{
 }
 
 .container {
-    margin-top: 32px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container figure {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container figcaption {
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 70%;
+    transform: translate(0, 50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    padding: 8px 0;
+    width: 100%;
 }
 
 /* grid layout */
@@ -110,6 +137,7 @@ nav a:hover{
 
 .container img:hover {
     transform: scale(1.1);
+    z-index: 100;
 }
 
 
@@ -130,19 +158,27 @@ nav a:hover{
 
 #grid_layout aside {
     grid-row: 3 / span 1;
-    background-image: url("../img/jiangwen.png");
-    background-size: 20%;
-    filter: blur(4px) brightness(0.8);
+    border-top: 1px solid white;
+    color:rgba(200, 229, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#grid_layout aside i {
+    font-size: 24px;
+}
+
+#grid_layout aside a{
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
 #grid_layout footer {
     grid-row: 4 / span 1;
-    border-top: 1px solid white;
-    color:rgba(200, 229, 255, 1);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 24px;
 }
 
 
@@ -196,4 +232,24 @@ nav a:hover{
     #jiangwen {
         animation: none;
     }
+}
+
+footer {
+    background-color: black;
+    color:rgba(200, 229, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 12px;
+    padding: 8px;
+}
+
+#moreInfo_page main, #awards_page main {
+    padding: 16px;
+}
+
+#moreInfo_page main p, #awards_page main p {
+    line-height: 1.5;
+    font-size: 16px;
+    margin: 32px 0;
 }
