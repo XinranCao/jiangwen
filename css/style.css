@@ -6,7 +6,6 @@ nav {
     height: 50px;
     z-index: 100;
     background: rgba(0,0,0,0.8);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(10px);
     color: rgba(200, 229, 255, 0.8);
 }
@@ -249,11 +248,11 @@ footer {
 
 #moreInfo_page main, #awards_page main {
     padding: 16px;
+    color:rgba(200, 229, 255, 0.8);
 }
 
 #moreInfo_page main p, #awards_page main p {
     line-height: 1.5;
     font-size: 16px;
     margin: 32px 0;
-    color:rgba(200, 229, 255, 0.8);
 }
