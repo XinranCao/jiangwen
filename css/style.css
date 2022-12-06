@@ -7,53 +7,39 @@ nav {
     z-index: 100;
     background: rgba(0,0,0,0.8);
     backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
     color: rgba(200, 229, 255, 0.8);
 }
 
-table, th, td {
-    border: 1px solid;
-    padding: 10px;
-    background-color: rgb(200, 229, 255);
-  }
-
-a:link{color:inherit}
-a:visited{color:inherit}
-a:hover{color:inherit}
-
-.logo {
-    height: 40px;
-    width: 40px;    
-    min-height: 40px;
-    min-width: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 16px 0 8px;
-}
-
-body {
-    background-color: black;
-}
-
-header {
-    height: 50px;
-}
-
-nav img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+nav a:link{color:inherit}
+nav a:visited{color:inherit}
+nav a:hover{color:inherit}
 
 nav ul{
     display: flex;
+    flex-direction: column;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
+    justify-content: center;
 }
 
+
 nav li {
-    width: 80px;
+    display: none;
+    justify-content: center;
+}
+
+ul:hover {
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+ul:hover li {
+    width: 100%;
+    padding: 4px 0;
+    display: flex;
+    justify-content: center;
+    background: #010203;
 }
 
 nav a {
@@ -67,6 +53,7 @@ nav .active {
     color: rgba(200, 229, 255, 0.8);
     text-shadow: 0px 0px 8px rgba(200, 229, 255, 1);
     font-weight: 600;
+    display: flex;
 }
 
 @keyframes text_glow {
@@ -81,6 +68,32 @@ nav .active {
 
 nav a:hover{
     animation: text_glow 1s ease-in-out alternate infinite;
+}
+
+
+body {
+    background-color: black;
+}
+
+header {
+    height: 50px;
+}
+
+.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1000;
+}
+
+.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
 }
 
 .container {
@@ -111,23 +124,6 @@ nav a:hover{
     width: 100%;
 }
 
-/* grid layout */
-/* .container {
-    margin-top: 32px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.container figure {
-    grid-column: span 1;
-    grid-row: span 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border: 2px solid white;
-} */
-
 .container img {
     width: 100%;
     height: 100%;
@@ -140,7 +136,7 @@ nav a:hover{
 
 .container img:hover {
     transform: scale(1.1);
-    z-index: 100;
+    z-index: 10;
 }
 
 
@@ -242,7 +238,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px;
 }
 
@@ -255,4 +251,90 @@ footer {
     line-height: 1.5;
     font-size: 16px;
     margin: 32px 0;
+}
+
+@media all and (min-width: 500px){
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        width: 100vw;
+        height: 50px;
+        z-index: 100;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: saturate(180%) blur(10px);
+        -webkit-backdrop-filter: saturate(180%) blur(10px);
+        color: rgba(200, 229, 255, 0.8);
+    }
+    
+    nav a:link{color:inherit}
+    nav a:visited{color:inherit}
+    nav a:hover{color:inherit}
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    ul:hover {
+        justify-content: space-evenly;
+    }
+
+
+    nav li {
+        width: 80px;
+        display: flex;
+    }
+    
+    nav a {
+        user-select: none;
+        font-family: 'Cinzel', serif;
+        font-size: 16px;
+        text-decoration: none;
+    }
+    
+    nav .active {
+        color: rgba(200, 229, 255, 0.8);
+        text-shadow: 0px 0px 8px rgba(200, 229, 255, 1);
+        font-weight: 600;
+    }
+    
+    @keyframes text_glow {
+        0% {
+            color: rgba(200, 229, 255, 0.8);
+        }
+        100% {
+            color: rgba(200, 229, 255, 1);
+            text-shadow: 0px 0px 6px rgba(200, 229, 255, 1)
+        }
+    }
+    
+    nav a:hover{
+        animation: text_glow 1s ease-in-out alternate infinite;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: unset;
+    }
+    
+    .container figure {
+        grid-column: span 1;
+        grid-row: span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border: 2px solid white;
+    }
+}
+
+@media all and (min-width: 800px){
+
 }
