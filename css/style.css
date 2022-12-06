@@ -29,17 +29,20 @@ nav li {
     justify-content: center;
 }
 
-ul:hover {
+nav ul:hover {
     justify-content: flex-start;
-    cursor: pointer;
 }
 
-ul:hover li {
+nav ul:hover li {
     width: 100%;
     padding: 4px 0;
     display: flex;
     justify-content: center;
-    background: #010203;
+    background-color: #000000;
+}
+
+nav ul:hover a {
+    cursor: pointer;
 }
 
 nav a {
@@ -56,20 +59,18 @@ nav .active {
     display: flex;
 }
 
-@keyframes text_glow {
+@keyframes background_glow {
     0% {
-        color: rgba(200, 229, 255, 0.8);
+        background: #000000;
     }
     100% {
-        color: rgba(200, 229, 255, 1);
-        text-shadow: 0px 0px 6px rgba(200, 229, 255, 1)
+        background: #4D4E4F;
     }
 }
 
-nav a:hover{
-    animation: text_glow 1s ease-in-out alternate infinite;
+nav li:hover{
+    animation: background_glow 1s ease-in-out alternate infinite;
 }
-
 
 body {
     background-color: black;
@@ -139,46 +140,110 @@ header {
     z-index: 10;
 }
 
-
-#grid_layout {
+#main_page, #moreInfo_page  {
     display: grid;
     height: 100vh;
-    grid-template-rows: 50px 70vw 1fr 60px;
+    grid-template-rows: 50px 70vw 3fr 1fr 30px;
 }
 
-#grid_layout header {
+#awards_page {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 50px 70vw 1fr 30px;
+}
+
+#main_page header, #moreInfo_page header, #awards_page header {
     grid-row: 1 / span 1;
 }
 
-#grid_layout main {
+#main_page main, #moreInfo_page main, #awards_page main {
+    overflow: hidden;
     grid-row: 2 / span 1;
 }
 
-#grid_layout aside {
+#moreInfo_page main figure img, #awards_page main figure img {
+    width: 100%;
+}
+
+.material {
     grid-row: 3 / span 1;
-    color:rgba(200, 229, 255, 0.8);
+    color:rgba(200, 229, 255, 1);
+    margin: 32px;
+    line-height: 1.5;
+}
+
+.material > p {
+    font-style: italic;
+}
+
+.material a {
+    user-select: none;
+    color:rgba(200, 229, 255, 1);
+    font-size: 16px;
+}
+
+.material a:hover {
+    font-weight: bold;
+}
+
+#main_page aside {
+    grid-row: 4 / span 1;
     display: flex;
     flex-direction: column;
+    padding: 16px 0;
     align-items: center;
     justify-content: space-evenly;
 }
 
-#grid_layout aside i {
+#main_page aside i {
     font-size: 24px;
     color:rgba(200, 229, 255, 1);
 }
 
-#grid_layout aside a{
+#main_page aside a{
+    padding: 16px 0;
+    color:rgba(200, 229, 255, 0.8);
     text-decoration: none;
     text-align: center;
     line-height: 1.5;
     font-size: 14px;
 }
 
-#grid_layout footer {
+#awards_page footer, #moreInfo_page #form{
     grid-row: 4 / span 1;
 }
 
+#main_page footer, #moreInfo_page footer {
+    grid-row: 5 / span 1;
+}
+
+#moreInfo_page #form {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#moreInfo_page #form label {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-bottom: 16px;
+    color:rgba(200, 229, 255, 1);
+}
+
+#moreInfo_page #form input, #moreInfo_page #form textarea {
+    width: 100%;
+    margin-top: 16px;
+}
+
+#moreInfo_page #form textarea {
+    height: 100px;
+}
+
+#moreInfo_page #form button {
+    width: 40%;
+}
 
 #intro {
     display: flex;
@@ -195,6 +260,11 @@ header {
     position: relative;
     height: 120%;
     animation: flyin 1s ease;
+}
+
+@keyframes flyin {
+    from{ left: 200px;}
+    to {left: 0}
 }
 
 #quote_cn {
@@ -221,13 +291,12 @@ header {
     z-index: 10;
 }
 
-@keyframes flyin {
-    from{ left: 200px;}
-    to {left: 0}
-}
-
 @media (prefers-reduced-motion) {
     #jiangwen {
+        animation: none;
+    }
+
+    nav li:hover{
         animation: none;
     }
 }
@@ -255,55 +324,24 @@ footer {
 
 @media all and (min-width: 500px){
 
-    nav {
-        display: flex;
-        justify-content: flex-end;
-        position: fixed;
-        width: 100vw;
-        height: 50px;
-        z-index: 100;
-        background: rgba(0,0,0,0.8);
-        backdrop-filter: saturate(180%) blur(10px);
-        -webkit-backdrop-filter: saturate(180%) blur(10px);
-        color: rgba(200, 229, 255, 0.8);
-    }
-    
-    nav a:link{color:inherit}
-    nav a:visited{color:inherit}
-    nav a:hover{color:inherit}
-
     nav ul{
-        display: flex;
         flex-direction: row;
-        width: 100%;
-        align-items: center;
-        justify-content: space-evenly;
-        text-align: center;
-    }
-
-    ul:hover {
         justify-content: space-evenly;
     }
 
+    nav ul:hover {
+        justify-content: space-evenly;
+    }
+
+    nav ul:hover li {
+        width: 80px;
+    }
 
     nav li {
         width: 80px;
         display: flex;
     }
-    
-    nav a {
-        user-select: none;
-        font-family: 'Cinzel', serif;
-        font-size: 16px;
-        text-decoration: none;
-    }
-    
-    nav .active {
-        color: rgba(200, 229, 255, 0.8);
-        text-shadow: 0px 0px 8px rgba(200, 229, 255, 1);
-        font-weight: 600;
-    }
-    
+
     @keyframes text_glow {
         0% {
             color: rgba(200, 229, 255, 0.8);
@@ -318,23 +356,44 @@ footer {
         animation: text_glow 1s ease-in-out alternate infinite;
     }
 
+    nav li:hover{
+        animation: none;
+    }
+
     .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: unset;
+        justify-content: center;
     }
     
     .container figure {
-        grid-column: span 1;
-        grid-row: span 1;
+        width: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         border: 2px solid white;
     }
+
+    #main_page aside {
+        flex-direction: row;
+    }
+
+    #main_page aside a{
+        padding: 0;
+    }
+
+    @media (prefers-reduced-motion) {
+        nav a:hover{
+            animation: none;
+        }
+    }
 }
 
 @media all and (min-width: 800px){
-
+    .container figure {
+        width: 200px;
+    }
 }
