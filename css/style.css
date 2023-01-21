@@ -37,7 +37,7 @@ nav ul:hover li {
     padding: 4px 0;
     display: flex;
     justify-content: center;
-    background-color: #000000;
+    /* background-color: #000000; */
 }
 
 nav ul:hover a {
