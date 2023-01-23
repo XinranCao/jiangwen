@@ -92,6 +92,19 @@ header ul {
     background-color: black;
 }
 
+#cover::before { 
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url(../img/jiangwen_background.jpg);
+    background-size: cover;
+    filter: brightness(15%) blur(2px);
+}
+
 #cover h1{
     display: flex;
     align-items: center;
@@ -123,14 +136,6 @@ header ul {
     user-select: none;
     z-index: 1;
     color: white;
-}
-
-#cover #gallery {
-    width: 100%;
-    height: 100%;
-    filter: brightness(15%) blur(2px);
-    background-image: url(../img/jiangwen_background.jpg);
-    background-size: cover;
 }
 
 #mainContent {
