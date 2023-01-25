@@ -19,6 +19,7 @@
         </script>
         <script>
             //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+            // solves the problem of mobile web broswer nav bar blocking the content
             let vh = window.innerHeight * 0.01;
             // Then we set the value in the --vh custom property to the root of the document
             document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -75,7 +76,26 @@
             </div>
         </div>
         <main id="mainContent">
-
+            <div class="container">
+                <h1>导演作品</h1>
+                <h2>DIRECTOR</h2>
+                <div class="movieCard">
+                    <div class="poster"></div>
+                    <div class="info">
+                        <h1>Let the Bullets Fly (2010)</h1>
+                        <span>12/20/2010 (CN)</span>
+                        <span>Action, Comedy</span>
+                        <span>2h 12m</span>
+                        <h2>Overview</h2>
+                        <span>
+                            When circumstances force an outlaw to impersonate 
+                            a county governor and clean up a corrupt town, 
+                            the Robin Hood figure finds himself in a showdown 
+                            with the local godfather.
+                        </span>
+                    </div>
+                </div>
+            </div>
         </main>
     </body>
 </html>
