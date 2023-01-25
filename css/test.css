@@ -32,7 +32,7 @@
 }
 
 header{
-    position: sticky;
+    position: fixed;
     top: 0;
     display: flex;
     width: 100%;
@@ -66,7 +66,6 @@ nav a.icon {
 }
 
 nav.responsive a:not(:last-child) {
-    /* float: none; */
     width: 100%;
     display: block;
     text-align: left;
