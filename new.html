@@ -76,13 +76,87 @@
             </div>
         </div>
         <main id="mainContent">
-            <div class="container">
+            <div class="title">
                 <h1>导演作品</h1>
                 <h2>DIRECTOR</h2>
-                <div class="poster">
-                    <img alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg">
-                </div>
             </div>
+            <div class="carousel">
+                <div class="container">
+                    <div class="poster active" id="poster_1">
+                        <img alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_2">
+                        <img alt="let the bullets fly" src="img/gallery/devilsonthedoorstep/poster_00.jpg" width="100%">
+                    </div>               
+                    <div class="poster" id="poster_3">
+                        <img alt="let the bullets fly" src="img/gallery/thesunalsorises/poster_00.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_4">
+                        <img alt="let the bullets fly" src="img/gallery/greentea/poster_00.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_5">
+                        <img alt="let the bullets fly" src="img/gallery/hibiscustown/poster_00.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_6">
+                        <img alt="let the bullets fly" src="img/gallery/hiddenman/poster_02.jpg" width="100%">
+                    </div>                
+                    <div class="poster" id="poster_7">
+                        <img alt="let the bullets fly" src="img/gallery/intheheatofthesun/poster_00.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_8">
+                        <img alt="let the bullets fly" src="img/gallery/keepcool/poster_01.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_9">
+                        <img alt="let the bullets fly" src="img/gallery/letterfromanunknownwoman/poster_00.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_10">
+                        <img alt="let the bullets fly" src="img/gallery/redsorghum/poster_02.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_11">
+                        <img alt="let the bullets fly" src="img/gallery/themissinggun/poster_01.jpg" width="100%">
+                    </div>
+                    <div class="poster" id="poster_12">
+                        <img alt="let the bullets fly" src="img/gallery/gonewiththebullets/poster_00.jpg" width="100%">
+                    </div>
+                </div>
+                <div class="actionDots">
+                    <a class="active" href="#poster_1" id="action_1"></a>
+                    <a href="#poster_3" id="action_2"></a>
+                    <a href="#poster_2" id="action_3"></a>
+                    <a href="#poster_4" id="action_4"></a>
+                    <a href="#poster_5" id="action_5"></a>
+                    <a href="#poster_6" id="action_6"></a>
+                    <a href="#poster_7" id="action_7"></a>
+                    <a href="#poster_8" id="action_8"></a>
+                    <a href="#poster_9" id="action_9"></a>
+                    <a href="#poster_10" id="action_10"></a>
+                    <a href="#poster_11" id="action_11"></a>
+                    <a href="#poster_12" id="action_12"></a>
+                </div>
+            </div>  
         </main>
+        <script>
+            let timeout = null;
+            document.querySelector('.container').addEventListener('scroll', function() {
+                if(timeout !== null) clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    let id = Math.ceil(this.scrollLeft / (this.clientWidth - 80));
+                    document.querySelectorAll('.poster').forEach((poster, idx) => {
+                        if(id === idx) {
+                            poster.classList.add('active')
+                        } else {
+                            poster.classList.remove('active')
+                        }
+                    })
+                    document.querySelectorAll('.actionDots a').forEach((a, idx) => {
+                        if(id === idx) {
+                            a.classList.add('active')
+                        } else {
+                            a.classList.remove('active')
+                        }
+                    })
+                }.bind(this), 100);
+            })
+        </script>
     </body>
 </html>
