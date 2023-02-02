@@ -86,37 +86,37 @@
                         <img alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_2">
-                        <img alt="let the bullets fly" src="img/gallery/devilsonthedoorstep/poster_00.jpg" width="100%">
+                        <img alt="devils on the door step" src="img/gallery/devilsonthedoorstep/poster_00.jpg" width="100%">
                     </div>               
                     <div class="poster" id="poster_3">
-                        <img alt="let the bullets fly" src="img/gallery/thesunalsorises/poster_00.jpg" width="100%">
+                        <img alt="the sun also rises" src="img/gallery/thesunalsorises/poster_00.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_4">
-                        <img alt="let the bullets fly" src="img/gallery/greentea/poster_00.jpg" width="100%">
+                        <img alt="green tea" src="img/gallery/greentea/poster_00.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_5">
-                        <img alt="let the bullets fly" src="img/gallery/hibiscustown/poster_00.jpg" width="100%">
+                        <img alt="hibiscues town" src="img/gallery/hibiscustown/poster_00.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_6">
-                        <img alt="let the bullets fly" src="img/gallery/hiddenman/poster_02.jpg" width="100%">
+                        <img alt="hidden man" src="img/gallery/hiddenman/poster_02.jpg" width="100%">
                     </div>                
                     <div class="poster" id="poster_7">
-                        <img alt="let the bullets fly" src="img/gallery/intheheatofthesun/poster_00.jpg" width="100%">
+                        <img alt="in the heat of the sun" src="img/gallery/intheheatofthesun/poster_00.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_8">
-                        <img alt="let the bullets fly" src="img/gallery/keepcool/poster_01.jpg" width="100%">
+                        <img alt="keep cool" src="img/gallery/keepcool/poster_01.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_9">
-                        <img alt="let the bullets fly" src="img/gallery/letterfromanunknownwoman/poster_00.jpg" width="100%">
+                        <img alt="letter from an unknown woman" src="img/gallery/letterfromanunknownwoman/poster_00.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_10">
-                        <img alt="let the bullets fly" src="img/gallery/redsorghum/poster_02.jpg" width="100%">
+                        <img alt="red sorghum" src="img/gallery/redsorghum/poster_02.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_11">
-                        <img alt="let the bullets fly" src="img/gallery/themissinggun/poster_01.jpg" width="100%">
+                        <img alt="the missing gun" src="img/gallery/themissinggun/poster_01.jpg" width="100%">
                     </div>
                     <div class="poster" id="poster_12">
-                        <img alt="let the bullets fly" src="img/gallery/gonewiththebullets/poster_00.jpg" width="100%">
+                        <img alt="gone with the bullets" src="img/gallery/gonewiththebullets/poster_00.jpg" width="100%">
                     </div>
                 </div>
                 <div class="actionDots">
@@ -136,6 +136,20 @@
             </div>  
         </main>
         <script>
+            const role = [
+                ['导演作品', 'DIRECTOR'],
+                ['导演作品', 'DIRECTOR'],
+                ['导演作品', 'DIRECTOR'],
+                ['主演作品', 'LEAD'],
+                ['主演作品', 'LEAD'],
+                ['导演作品', 'DIRECTOR'],
+                ['导演作品', 'DIRECTOR'],
+                ['主演作品', 'LEAD'],
+                ['主演作品', 'LEAD'],
+                ['主演作品', 'LEAD'],
+                ['主演作品', 'LEAD'],
+                ['导演作品', 'DIRECTOR']
+            ]
             let timeout = null;
             document.querySelector('.container').addEventListener('scroll', function() {
                 if(timeout !== null) clearTimeout(timeout);
@@ -155,6 +169,8 @@
                             a.classList.remove('active')
                         }
                     })
+                    document.querySelector('#mainContent h1').innerHTML = role[id][0]
+                    document.querySelector('#mainContent h2').innerHTML = role[id][1]
                 }.bind(this), 100);
             })
         </script>
