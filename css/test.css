@@ -143,9 +143,18 @@ header ul {
 
 #cover #scrollHint {
     position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+}
+
+#test {
+    position: sticky;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 0;
 }
 
 #scrollHint a {
