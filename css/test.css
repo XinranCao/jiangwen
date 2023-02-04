@@ -95,8 +95,6 @@ header ul {
     scroll-snap-align: start;
 }
 
-
-
 #cover::before { 
     content: "";
     width: 100%;
@@ -108,9 +106,6 @@ header ul {
     background-image: url(../img/jiangwen_background.jpg);
     background-size: cover;
     filter: brightness(15%) blur(2px);
-}
-#test_page #cover::before{
-    content: none;
 }
 
 #cover h1{
