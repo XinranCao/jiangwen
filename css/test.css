@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 
-#new_page{
+#new_page, #test_page{
     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
@@ -95,6 +95,8 @@ header ul {
     scroll-snap-align: start;
 }
 
+
+
 #cover::before { 
     content: "";
     width: 100%;
@@ -106,6 +108,9 @@ header ul {
     background-image: url(../img/jiangwen_background.jpg);
     background-size: cover;
     filter: brightness(15%) blur(2px);
+}
+#test_page #cover::before{
+    content: none;
 }
 
 #cover h1{
@@ -143,14 +148,6 @@ header ul {
 
 #cover #scrollHint {
     position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    bottom: 0;
-}
-
-#test {
-    position: sticky;
     display: flex;
     width: 100%;
     justify-content: center;
