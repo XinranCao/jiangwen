@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" type="text/css" href="./css/html5reset.css">
         <link rel="stylesheet" type="text/css" href="./css/test.css">
-        <title>Home</title>
+        <title>Test</title>
         <script src="https://kit.fontawesome.com/6bfcf705b3.js" crossorigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"></script>
         <script>
@@ -51,6 +51,10 @@
                 const nav = document.querySelector('nav')
                 nav.classList.toggle('responsive')
             }
+
+            function scrollToMain() {
+                document.querySelector('#new_page').scrollBy(0,100)
+            }
           </script>
     </head>
 
@@ -58,10 +62,10 @@
         <a class = "skip" href="#mainContent">Jump to Main Content</a>
         <header>
             <nav>
-                <a href="new.html" class="active">HOME</a>
+                <a href="new.html">HOME</a>
                 <a href="about.html">ABOUT</a>
-                <a href="test.html">TEST</a>
-                <a href="javascript:void(0);" class="icon" onclick="showNav()"><i class="fa fa-bars"></i></a>
+                <a href="new.html" class="active">TEST</a>
+                <a class="icon" onclick="showNav()"><i class="fa fa-bars"></i></a>
             </nav>
         </header>
 
@@ -69,7 +73,7 @@
             <h1>姜文</h1>
             <h2>JIANG WEN</h2>
             <div id="scrollHint">
-                <a href="#mainContent" >
+                <a onclick="scrollToMain()" >
                     <svg t="1674566987952" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="865" width="64" height="64"><path d="M512.6144 679.0656a32.2048 32.2048 0 0 1-18.1248-5.632L101.5296 403.3536a32 32 0 0 1 36.2496-52.7872l374.8352 257.6384 373.76-257.5872a32 32 0 0 1 36.3008 52.6848l-391.68 270.08a31.7952 31.7952 0 0 1-18.3808 5.6832z" p-id="866" fill="#ffffff"></path></svg>
                 </a>
             </div>
