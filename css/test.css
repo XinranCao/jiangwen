@@ -2,11 +2,10 @@
     overflow: hidden;
 }
 
-#new_page, #test_page{
+#new_page, #movies_page{
     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
-    min-width: 300px;
     min-height: 500px;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -33,12 +32,17 @@
 }
 
 header{
+    min-width: 320px;
     position: sticky;
     top: 0;
     display: flex;
     width: 100%;
     background-color:rgba(190, 0, 39, 0.8);
     z-index: 100;
+}
+
+main{
+    min-width: 320px;
 }
 
 header nav {
@@ -146,15 +150,12 @@ header ul {
     display: flex;
     width: 100%;
     justify-content: center;
+    padding-bottom: 10px;
     bottom: 0;
 }
 
-#scrollHint a {
-    padding-bottom: 10px;
-}
-
 #scrollHint svg{
-    cursor: pointer;
+    cursor: none;
     animation: 5s bounce ease infinite;
 }
 
@@ -221,7 +222,7 @@ scroll-snap-type: x mandatory;
 }
   
 #mainContent .container .poster {
-    min-width: 75vw;
+    min-width: max(75vw, 200px);
     scroll-snap-align: center;
     display: block;
     transform: scale(0.8);
@@ -255,6 +256,46 @@ scroll-snap-type: x mandatory;
 
 #mainContent .actionDots .active{
     opacity: 0.9;
+}
+
+#gallery {
+    color: white
+}
+#gallery img {
+    filter: brightness(0.75);
+}
+
+#gallery .movieTitle {
+    position: relative;
+    top: -86px;
+    left: 32px;
+    font-size: max(6vw, 26px);
+    font-weight: bold;
+}
+
+#gallery .movieTags {
+    display: flex;
+    position: relative;
+    top: -70px;
+    left: 30px;
+    font-size: 18px;
+    gap: 16px;
+}
+
+#gallery .movieTag {
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#gallery .movieIntro {
+    font-size: 16px;
+    position: relative;
+    top: -46px;
+    padding: 0 16px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
 }
 
 @media screen and (min-width: 500px) {
