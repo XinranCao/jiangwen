@@ -37,8 +37,9 @@ header{
     top: 0;
     display: flex;
     width: 100%;
-    background-color:rgba(190, 0, 39, 0.8);
     z-index: 100;
+    height: 60px;
+    overflow: visible;
 }
 
 main{
@@ -47,7 +48,8 @@ main{
 
 header nav {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    background-color:rgba(190, 0, 39, 0.8);
 }
 
 nav a {   
@@ -60,7 +62,7 @@ nav a {
     font-size: 20px;
 }
 
-nav a:not(:first-child) {
+nav a:not(.active) {
     display: none;
 }
 
@@ -74,10 +76,12 @@ nav.responsive a:not(:last-child) {
     width: 100%;
     display: block;
     text-align: left;
+    background-color:rgba(190, 0, 39, 1);
 }
 
 nav.responsive {
     position: relative;
+    background-color: unset;
 }
 
 nav.responsive a.icon {
@@ -150,8 +154,11 @@ header ul {
     display: flex;
     width: 100%;
     justify-content: center;
-    padding-bottom: 10px;
     bottom: 0;
+}
+
+#scrollHint a {
+    padding-bottom: 10px;
 }
 
 #scrollHint svg{
@@ -241,7 +248,7 @@ scroll-snap-type: x mandatory;
     box-sizing: border-box;
     justify-content: center;
     width: 100%;
-    padding: 16px 0 32px 0;
+    padding: 16px 0 16px 0;
 }
 
 #mainContent .actionDots a{
@@ -259,7 +266,10 @@ scroll-snap-type: x mandatory;
 }
 
 #gallery {
-    color: white
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    color: white;
 }
 #gallery img {
     filter: brightness(0.7);
