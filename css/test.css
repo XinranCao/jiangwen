@@ -310,15 +310,16 @@ scroll-snap-type: x mandatory;
 }
 
 #gallery .movieIntro {
+    font-family: "gitan-latin", Arial, Helvetica, sans-serif;
     font-size: 18px;
     padding: 8px 16px 36px 16px;
     line-height: 1.5;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.6px;
 }
 
 @media screen and (min-width: 500px) {
 
-    nav a:not(:first-child) {
+    nav a:not(.active) {
         display: block;
     }    
     nav a.icon {
@@ -332,7 +333,7 @@ scroll-snap-type: x mandatory;
 
 @media screen and (min-width: 900px) {
 
-    nav a:not(:first-child) {
+    nav a:not(.active) {
         display: block;
     }    
     nav a.icon {
