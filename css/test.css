@@ -193,7 +193,7 @@ header ul {
 #mainContent h1 {
     font-family: hellofont-id-yongshengcusong, sans-serif;
     font-weight: 400;
-    font-size: 72px;
+    font-size: 60px;
     font-style: normal;
     user-select: none;
     z-index: 1;
@@ -248,7 +248,7 @@ scroll-snap-type: x mandatory;
     box-sizing: border-box;
     justify-content: center;
     width: 100%;
-    padding: 16px 0 16px 0;
+    padding: 16px 0 8px 0;
 }
 
 #mainContent .actionDots a{
