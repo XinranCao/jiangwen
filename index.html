@@ -47,12 +47,12 @@
     </head>
 
     <body id="new_page">
-        <a class = "skip" href="#mainContent">Jump to Main Content</a>
+        <a class = "skip" href="#mainContent" aria-label="Jump to Main Content">Jump to Main Content</a>
         <header>
             <nav>
                 <a href="index.html" class="active">HOME</a>
                 <a href="movies.html">MOVIES</a>
-                <a href="javascript:void(0);" class="icon" onclick="showNav()"><i class="fa fa-bars"></i></a>
+                <a href="javascript:void(0);" class="icon" onclick="showNav()" aria-label="expand menu"><i class="fa fa-bars"></i></a>
             </nav>
         </header>
 
@@ -60,7 +60,7 @@
             <h1>姜文</h1>
             <h2>JIANG WEN</h2>
             <div id="scrollHint">
-                <a href="#mainContent">
+                <a href="#mainContent" aria-label="Jump to Main Content">
                     <svg t="1674566987952" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="865" width="64" height="64"><path d="M512.6144 679.0656a32.2048 32.2048 0 0 1-18.1248-5.632L101.5296 403.3536a32 32 0 0 1 36.2496-52.7872l374.8352 257.6384 373.76-257.5872a32 32 0 0 1 36.3008 52.6848l-391.68 270.08a31.7952 31.7952 0 0 1-18.3808 5.6832z" p-id="866" fill="#ffffff"></path></svg>
                 </a>
             </div>
@@ -71,7 +71,7 @@
                 <h2>DIRECTOR</h2>
             </div>
             <div class="carousel">
-                <div class="container">
+                <div class="container" tabindex="0">
                     <div class="poster active" id="poster_1">
                         <img alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
                     </div>
@@ -110,18 +110,18 @@
                     </div>
                 </div>
                 <div class="actionDots">
-                    <a class="active" href="#poster_1" id="action_1"></a>
-                    <a href="#poster_3" id="action_2"></a>
-                    <a href="#poster_2" id="action_3"></a>
-                    <a href="#poster_4" id="action_4"></a>
-                    <a href="#poster_5" id="action_5"></a>
-                    <a href="#poster_6" id="action_6"></a>
-                    <a href="#poster_7" id="action_7"></a>
-                    <a href="#poster_8" id="action_8"></a>
-                    <a href="#poster_9" id="action_9"></a>
-                    <a href="#poster_10" id="action_10"></a>
-                    <a href="#poster_11" id="action_11"></a>
-                    <a href="#poster_12" id="action_12"></a>
+                    <a class="active" href="#poster_1" id="action_1" aria-label="Jump to poster 1"></a>
+                    <a href="#poster_2" id="action_2" aria-label="Jump to poster 2"></a>
+                    <a href="#poster_3" id="action_3" aria-label="Jump to poster 3"></a>
+                    <a href="#poster_4" id="action_4" aria-label="Jump to poster 4"></a>
+                    <a href="#poster_5" id="action_5" aria-label="Jump to poster 5"></a>
+                    <a href="#poster_6" id="action_6" aria-label="Jump to poster 6"></a>
+                    <a href="#poster_7" id="action_7" aria-label="Jump to poster 7"></a>
+                    <a href="#poster_8" id="action_8" aria-label="Jump to poster 8"></a>
+                    <a href="#poster_9" id="action_9" aria-label="Jump to poster 9"></a>
+                    <a href="#poster_10" id="action_10" aria-label="Jump to poster 10"></a>
+                    <a href="#poster_11" id="action_11" aria-label="Jump to poster 11"></a>
+                    <a href="#poster_12" id="action_12" aria-label="Jump to poster 12"></a>
                 </div>
             </div>  
         </main>

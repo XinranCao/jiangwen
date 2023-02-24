@@ -212,7 +212,7 @@ header ul {
 }
 
 #mainContent .container {
-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
     box-sizing: border-box;
     display: flex;
     overflow-x: scroll;
@@ -279,7 +279,7 @@ scroll-snap-type: x mandatory;
 #gallery .movieContainer {
     box-shadow: 0px 0px 8px black;
     line-height: 1.2;
-    background-color: #010203;
+    background-color: black;
 }
 
 #gallery .basicInfo {
@@ -321,7 +321,7 @@ scroll-snap-type: x mandatory;
     font-size: max(18px, 4vw);
     font-weight: 900;
     margin: 12px 0 2px 0;
-    color: rgba(190, 0, 39, 1);
+    color: #FD3F53;
 }
 
 #gallery .star {
