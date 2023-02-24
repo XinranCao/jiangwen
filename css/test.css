@@ -8,7 +8,7 @@
     width: 100%;
     min-height: 500px;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    overflow: scroll;
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #010203;
@@ -99,6 +99,7 @@ header ul {
     padding: 60px 0 0;
     position: relative;
     width: 100%;
+    min-width: 320px;
     height: 100%;
     scroll-snap-align: start;
 }
@@ -113,7 +114,7 @@ header ul {
     display: block;
     background-image: url(../img/jiangwen_background.jpg);
     background-size: cover;
-    filter: brightness(15%) blur(2px);
+    filter: brightness(30%) blur(2px);
 }
 
 #cover h1{
@@ -252,9 +253,9 @@ scroll-snap-type: x mandatory;
 }
 
 #mainContent .actionDots a{
-    margin: 0 2px;
-    height: 16px;
-    width: 16px;
+    margin: 0 4px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background-color: white;
     opacity: 0.6;
@@ -276,20 +277,21 @@ scroll-snap-type: x mandatory;
 }
 
 #gallery .movieContainer {
-    background: rgba(190, 0, 39, 0.6);
     box-shadow: 0px 0px 8px black;
     line-height: 1.2;
+    background-color: #010203;
 }
 
-#gallery .movieInfo {
+#gallery .basicInfo {
     position: relative;
 }
 
 #gallery .movieTitle {
+    display: block;
     position: absolute;
-    bottom: 56px;
+    bottom: calc(42px + 4vw);
     padding: 0 16px;
-    font-size: 8vw;
+    font-size: max(25px, 8vw);
     font-weight: bold;
 }
 
@@ -298,7 +300,6 @@ scroll-snap-type: x mandatory;
     bottom: 16px;
     left: 12px;
     display: flex;
-    font-size: 18px;
     gap: 16px;
 }
 
@@ -306,13 +307,39 @@ scroll-snap-type: x mandatory;
     padding: 6px 8px;
     box-sizing: border-box;
     border-radius: 6px;
+    font-size: max(18px, 4vw);
     background-color: rgba(0,0,0,0.6);
 }
 
-#gallery .movieIntro {
+#gallery .moreInfo {
+    padding: 0 16px 36px 16px;
     font-family: "gitan-latin", Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    padding: 8px 16px 36px 16px;
+}
+
+#gallery .moreInfo h2 {
+    text-transform: uppercase;
+    font-size: max(18px, 4vw);
+    font-weight: 900;
+    margin: 12px 0 2px 0;
+    color: rgba(190, 0, 39, 1);
+}
+
+#gallery .star {
+    display: inline-block;
+}
+
+#gallery .star:after { 
+    content: "  \00b7  "; 
+    padding: 8px;
+    font-weight: 900;
+}
+
+#gallery .star:last-child::after { 
+    content: "";
+}
+
+#gallery .movieIntro, #gallery .director, #gallery .star {
+    font-size: max(18px, 3.6vw);
     line-height: 1.5;
     letter-spacing: 0.6px;
 }
