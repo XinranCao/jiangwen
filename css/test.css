@@ -435,10 +435,70 @@ header ul {
     color: #FD3F53;
 }
 
-#infoContainer .source {
+#wikiSource {
     display: block;
     text-align: end;
     text-transform: uppercase;
+}
+
+#externalLinks {
+    display: grid;
+    padding: 0 4px;
+    column-gap: 32px;
+    row-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 80px);
+    margin: 8px 0 20px 0;
+}
+
+#externalLinks .source {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;   
+    font-size: max(14px, 4vw);
+    font-weight: bold;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#externalLinks .source a {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+#infoContainer .videoSource {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: max(16px, 3vw);
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+#infoContainer .videoSource:link,
+#infoContainer .videoSource:visited, 
+#infoContainer .videoSource:hover
+#infoContainer .videoSource:active {
+    color: white;
+}
+
+#infoContainer .videoSource svg {
+    width: max(16px, 3vw);
+    height: max(16px, 3vw);
+    margin-left: 4px;
+}
+
+#infoContainer iframe {
+    display: flex;
+    margin: 16px auto;
 }
 
 @media screen and (min-width: 500px) {
