@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 
-#new_page, #movies_page{
+#new_page, #movies_page, #more_page{
     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
@@ -60,6 +60,10 @@ nav a {
     text-align: center;
     padding: 20px 16px;
     font-size: 20px;
+}
+
+nav .active {
+    font-weight: bold;
 }
 
 nav a:not(.active) {
@@ -322,7 +326,7 @@ header ul {
 
 #gallery .moreInfo h2 {
     text-transform: uppercase;
-    font-size: max(18px, 4vw);
+    font-size: max(20px, 4vw);
     font-weight: 900;
     margin: 12px 0 2px 0;
     color: #FD3F53;
@@ -332,20 +336,109 @@ header ul {
     display: inline-block;
 }
 
-#gallery .star:after { 
-    content: "  \00b7  "; 
+#gallery .star:not(:last-child):after { 
+    content: "\00b7"; 
     padding: 8px;
     font-weight: 900;
-}
-
-#gallery .star:last-child::after { 
-    content: "";
 }
 
 #gallery .movieIntro, #gallery .director, #gallery .star {
     font-size: max(18px, 3.6vw);
     line-height: 1.5;
     letter-spacing: 0.6px;
+}
+
+#nameLetters {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    padding: 108px 16px 0 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#infoMain h1 {
+    font-family: hellofont-id-yongshengcusong, sans-serif;
+    font-weight: 400;
+    font-size: 126px;
+    color: red;
+}
+
+#infoHeader, #imgCover {
+    position: relative;
+    overflow: hidden;
+}
+
+#imgCover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 -10px 20px 10px black;
+}
+
+#backgroundInfo {
+    color: white;
+    padding: 0 16px 28px;    
+    font-family: "gitan-latin", Arial, Helvetica, sans-serif;
+}
+
+#backgroundInfo h1 {
+    text-transform: uppercase;
+    font-size: max(48px, 10vw);
+    font-weight: 900;
+    margin-bottom: 16px;     
+    font-family: "gitan-latin", Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+#roles {
+    margin-bottom: 16px;
+}
+
+#roles span {
+    font-size: max(18px, 3vw);
+    font-weight: bold;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-top: 8px;
+}
+
+#roles span:not(:last-child) { 
+    border-right: 2px solid #C8C8C8;
+    margin-right: 8px;
+    padding-right: 10px;
+}
+
+#quote {
+    font-size: max(18px, 3.6vw);    
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+}
+
+#infoContainer {
+    padding: 0 16px 36px;   
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    font-family: "gitan-latin", Arial, Helvetica, sans-serif;
+}
+
+#infoContainer h2 {
+    text-transform: uppercase;
+    font-size: max(20px, 4vw);
+    font-weight: 900;
+    margin: 12px 0 2px 0;
+    color: #FD3F53;
+}
+
+#infoContainer .source {
+    display: block;
+    text-align: end;
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 500px) {

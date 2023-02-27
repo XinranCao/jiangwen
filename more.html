@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/favicon.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" type="text/css" href="./css/html5reset.css">
+        <link rel="stylesheet" type="text/css" href="./css/test.css">
+        <title>More</title>
+        <script src="https://kit.fontawesome.com/6bfcf705b3.js" crossorigin="anonymous"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-ZM5MZV2D0W');
+        </script>
+        <script>
+            //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+            // solves the problem of mobile web broswer nav bar blocking the content
+            let vh = window.innerHeight * 0.01;
+            // Then we set the value in the --vh custom property to the root of the document
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+            // We listen to the resize event
+            window.addEventListener('resize', () => {
+                // We execute the same script as before
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            });
+            (function(d) {
+              var config = {
+                kitId: 'yrm6ikz',
+                scriptTimeout: 3000,
+                async: true
+              },
+              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+            function showNav() {
+                const nav = document.querySelector('nav')
+                nav.classList.toggle('responsive')
+            }
+          </script>
+    </head>
+
+    <body id="more_page">
+        <header>
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="movies.html">MOVIES</a>
+                <a href="more.html" class="active">MORE</a>
+                <a href="javascript:void(0);" class="icon" onclick="showNav()" aria-label="expand menu"><i class="fa fa-bars"></i></a>
+            </nav>
+        </header>
+        <main id="infoMain">
+            <div id="infoHeader">
+                <div id='nameLetters'>
+                    <h1>姜</h1>
+                    <h1>文</h1>
+                </div>
+                <div id="imgCover">
+                    <img alt="Jiang Wen" src="img/jiangwen.png" width="100%"/>
+                </div>
+                <div id="backgroundInfo">
+                    <h1>JIANG WEN</h1>
+                    <div id="roles">
+                        <span>DIRECTOR</span>
+                        <span>ACTOR</span>
+                        <span>SCREENWRITER</span>
+                    </div>
+                    <p id="quote">"What I provide to the audience is never plain water. I want to make wine and get drunk with everyone in the theater."</p>
+                </div>
+            </div>
+            <div id="infoContainer">
+                <h2>biography</h2>
+                <span class="biography">
+                    Jiang Wen (born 5 January 1963) is a Chinese actor, screenwriter, and director. As a director, he is sometimes grouped with the "Sixth Generation" that emerged in the 1990s. Jiang is also well known internationally as an actor, having starred with Gong Li in Zhang Yimou's debut film Red Sorghum (1986), and more recently as Baze Malbus in the Star Wars film Rogue One (2016). He is the older brother of fellow actor Jiang Wu.
+                </span>
+                <span class="source">From <a href="https://en.wikipedia.org/wiki/Jiang_Wen" target="_blank" aria-label="expand menu">WikiPedia</a></span>
+                <h2>Explore</h2>
+                <h2>Fan Made</h2>
+            </div>
+        </main>
+        <script>
+            document.querySelector('#more_page').addEventListener('scroll', (e)=>{
+                const scrollTop = e.target.scrollTop
+                if (scrollTop < 300) {
+                    document.querySelector('#nameLetters').style.top = e.target.scrollTop + 'px'
+                }
+            })
+        </script>
+    </body>
+</html>
