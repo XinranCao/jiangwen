@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 
-#new_page, #movies_page, #more_page{
+#new_page, #movies_page, #more_page, #about_page{
     height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
@@ -64,6 +64,7 @@ nav a {
 
 nav .active {
     font-weight: bold;
+    filter: brightness(1.1)
 }
 
 nav a:not(.active) {
@@ -499,6 +500,74 @@ header ul {
 #infoContainer iframe {
     display: flex;
     margin: 16px auto;
+}
+
+#aboutInfo {
+    padding: 0 16px 36px;   
+    color: white;
+    font-size: max(18px, 3.6vw);    
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    font-family: "gitan-latin", Arial, Helvetica, sans-serif;
+}
+
+#aboutInfo h1 {
+    text-transform: uppercase;
+    font-size: max(36px, 8vw);
+    font-weight: 900;
+    margin-bottom: 16px;     
+    font-family: "gitan-latin", Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+#aboutInfo p {
+    margin: 16px 0 32px 0;
+}
+
+#aboutInfo p::first-letter {
+    font-weight: bold;
+    font-size: 200%;
+    line-height: 0.6;
+}
+
+#aboutInfo strong {
+    font-weight: bold;
+}
+
+#aboutInfo span {
+    font-size: 16px;
+}
+
+#aboutInfo form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    gap: 16px;
+}
+
+#aboutInfo form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+    font-size: 16px;
+}
+
+#aboutInfo form input {
+    max-width: 200px;
+}
+
+#aboutInfo form textarea {
+    height: 80px;
+}
+
+#aboutInfo form button {
+    width: 100%;
+    max-width: 100px;
+    height: 28px;
+    font-weight: bold;
+    margin: auto;
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 500px) {
