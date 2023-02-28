@@ -622,21 +622,21 @@ header ul {
     }
 
     #mainContent .actionDots a {
-        margin: 0 8px;
+        /* margin: 0 8px;
         width: 16px;
-        height: 16px;
+        height: 16px; */
     }
 
     #gallery .movieTitle {
-        font-size: max(20px, 6vw);
+        font-size: max(20px, 4vw);
     }
 
     #gallery .movieTag {
-        font-size: max(18px, 3vw);
+        font-size: max(18px, 2.4vw);
     }
 
     #gallery .moreInfo h2 {
-        font-size: max(16px, 2.6vw);
+        font-size: max(16px, 2vw);
     }
 
     #gallery .movieIntro, #gallery .director, #gallery .star {
@@ -703,7 +703,6 @@ header ul {
 
     #externalLinks {
         grid-template-columns: repeat(5, 1fr);
-        
         grid-template-rows: 16vw;
     }
 

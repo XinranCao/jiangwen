@@ -149,22 +149,12 @@
                 timeout = setTimeout(function() {
                     let scale = this.clientWidth <= 500 ? 0.75 : 0.5
                     let id = Math.round(this.scrollLeft / (this.clientWidth * scale));
-                    console.log(this.clientWidth)
-                    console.log(this.scrollLeft)
-                    console.log(this.scrollLeft / (this.clientWidth * scale))
+                    console.log(id)
                     document.querySelectorAll('.poster').forEach((poster, idx) => {
-                        if(id === idx) {
-                            poster.classList.add('active')
-                        } else {
-                            poster.classList.remove('active')
-                        }
+                        poster.classList.toggle('active', id === idx)
                     })
                     document.querySelectorAll('.actionDots a').forEach((a, idx) => {
-                        if(id === idx) {
-                            a.classList.add('active')
-                        } else {
-                            a.classList.remove('active')
-                        }
+                        a.classList.toggle('active', id === idx)
                     })
                     if(id === role.length) {return }
                     document.querySelector('#mainContent h1').innerHTML = role[id][0]
