@@ -146,7 +146,7 @@
             document.querySelector('.container').addEventListener('scroll', function() {
                 if(timeout !== null) clearTimeout(timeout);
                 timeout = setTimeout(function() {
-                    let id = Math.ceil(this.scrollLeft / (this.clientWidth - 80));
+                    let id = Math.ceil(this.scrollLeft / (this.clientWidth * 0.75));
                     document.querySelectorAll('.poster').forEach((poster, idx) => {
                         if(id === idx) {
                             poster.classList.add('active')
