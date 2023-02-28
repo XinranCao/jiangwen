@@ -525,7 +525,7 @@ header ul {
     font-weight: 900;
     margin: 16px 0 24px;     
     font-family: "gitan-latin", Arial, Helvetica, sans-serif;
-    color: red;
+    color: #FD3F53;
 }
 
 #aboutInfo p {
@@ -608,7 +608,7 @@ header ul {
     }
 
     #mainContent .container .poster {
-        min-width: max(50vw, 240px);    
+        min-width: max(60vw, 240px);    
         filter: blur(4px) brightness(0.8);
     }
 
