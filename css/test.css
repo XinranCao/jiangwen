@@ -608,7 +608,9 @@ header ul {
     }
 
     #mainContent .container .poster {
-        min-width: max(65vw, 240px);    
+        scroll-margin-left: 20vw;
+        scroll-margin-right: 20vw;
+        min-width: max(60vw, 240px);    
         filter: blur(4px) brightness(0.8);
     }
 
