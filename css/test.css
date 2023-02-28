@@ -245,7 +245,8 @@ header ul {
 }
 
 #reminder {
-    min-width: 50px;
+    min-width: 100px;
+    user-select: none;
 }
 
 #mainContent .container .active {

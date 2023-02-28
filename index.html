@@ -162,6 +162,7 @@
                             a.classList.remove('active')
                         }
                     })
+                    if(id === role.length) {return }
                     document.querySelector('#mainContent h1').innerHTML = role[id][0]
                     document.querySelector('#mainContent h2').innerHTML = role[id][1]
                 }.bind(this), 100);
