@@ -604,6 +604,7 @@ header ul {
 
     #mainContent .container {
         padding: 0 220px 0;
+        margin-bottom: 36px;
     }
 
     #mainContent .container .poster {
@@ -618,6 +619,12 @@ header ul {
     
     #reminder {
         min-width: 200px;
+    }
+
+    #mainContent .actionDots a {
+        margin: 0 8px;
+        width: 16px;
+        height: 16px;
     }
 
     #gallery .movieTitle {
@@ -659,6 +666,10 @@ header ul {
         align-items: center;
     }
 
+    #infoContainer {
+        font-size: max(16px, 2vw);
+    }
+
     #imgCover {
         width: 40%;
     }
@@ -691,8 +702,9 @@ header ul {
     }
 
     #externalLinks {
-        row-gap: 36px;
-        margin: 24px 0 48px 0;
+        grid-template-columns: repeat(5, 1fr);
+        
+        grid-template-rows: 16vw;
     }
 
     #explore {
