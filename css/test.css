@@ -305,7 +305,7 @@ header ul {
     position: absolute;
     bottom: calc(42px + 4vw);
     padding: 0 16px;
-    font-size: max(25px, 8vw);
+    font-size: max(24px, 8vw);
     font-weight: bold;
 }
 
@@ -521,9 +521,9 @@ header ul {
 
 #aboutInfo h1 {
     text-transform: uppercase;
-    font-size: max(36px, 8vw);
+    font-size: max(36px, 6vw);
     font-weight: 900;
-    margin-bottom: 16px;     
+    margin: 16px 0 24px;     
     font-family: "gitan-latin", Arial, Helvetica, sans-serif;
     color: red;
 }
@@ -534,7 +534,7 @@ header ul {
 
 #aboutInfo p::first-letter {
     font-weight: bold;
-    font-size: 200%;
+    font-size: 160%;
     line-height: 0.6;
 }
 
@@ -620,13 +620,38 @@ header ul {
         min-width: 200px;
     }
 
+    #gallery .movieTitle {
+        font-size: max(20px, 6vw);
+    }
+
+    #gallery .movieTag {
+        font-size: max(18px, 3vw);
+    }
+
+    #gallery .moreInfo h2 {
+        font-size: max(16px, 2.6vw);
+    }
+
+    #gallery .movieIntro, #gallery .director, #gallery .star {
+        font-size: max(16px, 1.8vw);
+
+    }
+
+    #aboutInfo {
+        font-size: max(16px, 1.8vw);  
+    }
+
+    #aboutInfo h1 {
+        font-size: max(20px, 3.6vw);  
+    }
+
     #aboutInfo span, #aboutInfo form label {
-        font-size: 24px;
+        font-size: max(16px, 1.2vw);  
     }
 
     #aboutInfo form button {
         height: 36px;
-        font-size: 24px;
+        font-size: max(16px, 1.2vw);  
     }
 
     #infoHeader {
