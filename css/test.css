@@ -183,6 +183,7 @@ header ul {
     position: relative;
     width: 100%;
     height: 100%;
+    min-height: 650px;
     padding-top: 60px;
     scroll-snap-align: start;
     color: white;    
@@ -388,6 +389,7 @@ header ul {
 #backgroundInfo {
     color: white;
     padding: 0 16px 28px;    
+    box-sizing: border-box;
     font-family: "gitan-latin", Arial, Helvetica, sans-serif;
 }
 
@@ -427,7 +429,8 @@ header ul {
 
 #infoContainer {
     padding: 0 16px 36px;   
-    color: white;
+    color: white;    
+    font-size: max(16px, 3vw);    
     line-height: 1.5;
     letter-spacing: 0.6px;
     font-family: "gitan-latin", Arial, Helvetica, sans-serif;
@@ -453,7 +456,7 @@ header ul {
     column-gap: 32px;
     row-gap: 16px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 80px);
+    grid-template-rows: repeat(2, 16vw);
     margin: 8px 0 20px 0;
 }
 
@@ -570,6 +573,7 @@ header ul {
     width: 100%;
     max-width: 100px;
     height: 28px;
+    font-size: 16px;
     font-weight: bold;
     margin: auto;
     text-transform: uppercase;
@@ -586,6 +590,94 @@ header ul {
     #cover #gallery img {
         width: 20%;
         object-fit: contain;
+    }
+
+    #cover h1{
+        font-size: 120px;
+        transform: translateY(-160px);
+    }
+    
+    #cover h2{
+        font-size: 60px;
+        transform: translateY(-60px);
+    }
+
+    #mainContent .container {
+        padding: 0 220px 0;
+    }
+
+    #mainContent .container .poster {
+        min-width: max(50vw, 240px);    
+        filter: blur(4px) brightness(0.8);
+    }
+
+    #mainContent .container .active {
+        transform: none;
+        filter: none;
+    }
+    
+    #reminder {
+        min-width: 200px;
+    }
+
+    #aboutInfo span, #aboutInfo form label {
+        font-size: 24px;
+    }
+
+    #aboutInfo form button {
+        height: 36px;
+        font-size: 24px;
+    }
+
+    #infoHeader {
+        display: flex;
+        align-items: center;
+    }
+
+    #imgCover {
+        width: 40%;
+    }
+
+    #nameLetters {
+        display: none !important;
+    }
+
+    #backgroundInfo {
+        padding: 0 24px 28px;
+        width: 60%;
+    }
+
+    #backgroundInfo h1 {
+        font-size: max(32px, 6vw);
+        margin: 16px 0;
+    }
+
+    #roles {
+        margin-bottom: 28px;
+    }
+
+    #roles span {
+        font-size: 18px;
+        font-size: max(16px, 2.4vw);  
+    }
+
+    #quote {
+        font-size: max(16px, 3vw);  
+    }
+
+    #externalLinks {
+        row-gap: 36px;
+        margin: 24px 0 48px 0;
+    }
+
+    #explore {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 16px;
+    }
+
+    .iframeContainer iframe {
+        width: 100%;
     }
 }
 
