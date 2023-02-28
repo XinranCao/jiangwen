@@ -244,6 +244,10 @@ header ul {
     transition: 0.2s all ease;
 }
 
+#poster_12 {
+    margin-right: 40px;
+}
+
 #mainContent .container .active {
     transform: none;
     filter: none;
