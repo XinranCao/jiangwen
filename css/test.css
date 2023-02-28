@@ -370,7 +370,7 @@ header ul {
     color: red;
 }
 
-#infoHeader, #imgCover {
+#imgCover {
     position: relative;
     overflow: hidden;
 }

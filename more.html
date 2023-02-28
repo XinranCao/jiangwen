@@ -121,9 +121,10 @@
         </main>
         <script>
             document.querySelector('#more_page').addEventListener('scroll', (e)=>{
-                const scrollTop = e.target.scrollTop
-                if (scrollTop < (document.querySelector('#imgCover').clientHeight / 3)) {
-                    document.querySelector('#nameLetters').style.top = e.target.scrollTop + 'px'
+                if (e.target.scrollTop > (document.querySelector('#imgCover').clientHeight / 3)) {
+                    document.querySelector('#nameLetters').style.display = 'none'
+                } else {
+                    document.querySelector('#nameLetters').style.display = 'flex'
                 }
             })
         </script>
