@@ -74,57 +74,57 @@
             </div>
             <div class="carousel">
                 <div class="container" tabindex="0">
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(0)">
                         <img id="poster_0" class="active" alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(1)">
                         <img id="poster_1" alt="devils on the door step" src="img/gallery/devilsonthedoorstep/poster_00.jpg" width="100%">
                     </div>               
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(2)">
                         <img id="poster_2" alt="the sun also rises" src="img/gallery/thesunalsorises/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(3)">
                         <img id="poster_3" alt="green tea" src="img/gallery/greentea/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(4)">
                         <img id="poster_4" alt="hibiscues town" src="img/gallery/hibiscustown/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(5)">
                         <img id="poster_5" alt="hidden man" src="img/gallery/hiddenman/poster_02.jpg" width="100%">
                     </div>                
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(6)">
                         <img id="poster_6" alt="in the heat of the sun" src="img/gallery/intheheatofthesun/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(7)">
                         <img id="poster_7" alt="keep cool" src="img/gallery/keepcool/poster_01.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(8)">
                         <img id="poster_8" alt="letter from an unknown woman" src="img/gallery/letterfromanunknownwoman/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(9)">
                         <img id="poster_9" alt="red sorghum" src="img/gallery/redsorghum/poster_02.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(10)">
                         <img id="poster_10" alt="the missing gun" src="img/gallery/themissinggun/poster_01.jpg" width="100%">
                     </div>
-                    <div class="poster" >
+                    <div class="poster" onclick="jumpToPoster(11)">
                         <img id="poster_11" alt="gone with the bullets" src="img/gallery/gonewiththebullets/poster_00.jpg" width="100%">
                     </div>
                     <div id="reminder"></div>
                 </div>
                 <div class="actionDots">
-                    <a class="active" href="#poster_0" id="action_0" aria-label="Jump to poster 0"></a>
-                    <a href="#poster_1" id="action_1" aria-label="Jump to poster 1"></a>
-                    <a href="#poster_2" id="action_2" aria-label="Jump to poster 2"></a>
-                    <a href="#poster_3" id="action_3" aria-label="Jump to poster 3"></a>
-                    <a href="#poster_4" id="action_4" aria-label="Jump to poster 4"></a>
-                    <a href="#poster_5" id="action_5" aria-label="Jump to poster 5"></a>
-                    <a href="#poster_6" id="action_6" aria-label="Jump to poster 6"></a>
-                    <a href="#poster_7" id="action_7" aria-label="Jump to poster 7"></a>
-                    <a href="#poster_8" id="action_8" aria-label="Jump to poster 8"></a>
-                    <a href="#poster_9" id="action_9" aria-label="Jump to poster 9"></a>
-                    <a href="#poster_10" id="action_10" aria-label="Jump to poster 10"></a>
-                    <a href="#poster_11" id="action_11" aria-label="Jump to poster 11"></a>
+                    <div class="dot active" onclick="jumpToPoster(0)"></div>
+                    <div class="dot" onclick="jumpToPoster(1)"></div>
+                    <div class="dot" onclick="jumpToPoster(2)"></div>
+                    <div class="dot" onclick="jumpToPoster(3)"></div>
+                    <div class="dot" onclick="jumpToPoster(4)"></div>
+                    <div class="dot" onclick="jumpToPoster(5)"></div>
+                    <div class="dot" onclick="jumpToPoster(6)"></div>
+                    <div class="dot" onclick="jumpToPoster(7)"></div>
+                    <div class="dot" onclick="jumpToPoster(8)"></div>
+                    <div class="dot" onclick="jumpToPoster(9)"></div>
+                    <div class="dot" onclick="jumpToPoster(10)"></div>
+                    <div class="dot" onclick="jumpToPoster(11)"></div>
                 </div>
             </div>  
         </main>
@@ -144,26 +144,37 @@
                 ['导演作品', 'DIRECTOR']
             ]
             let timeout = null;
-            document.querySelector('.container').addEventListener('scroll', function() {
+            const container = document.querySelector('.container')
+            container.addEventListener('scroll', function() {
                 if(timeout !== null) clearTimeout(timeout);
                 timeout = setTimeout(function() {
-                    let scale = this.clientWidth <= 500 
+                    let scale = container.clientWidth <= 500 
                         ? 0.75 
-                        : this.clientWidth <= 900 
+                        : container.clientWidth <= 900 
                             ? 0.6
                             : 0.2
-                    let id = Math.round(this.scrollLeft / (this.clientWidth * scale));
+                    let id = Math.round(container.scrollLeft / (container.clientWidth * scale));
                     document.querySelectorAll('.poster img').forEach((poster, idx) => {
                         poster.classList.toggle('active', id === idx)
                     })
-                    document.querySelectorAll('.actionDots a').forEach((a, idx) => {
-                        a.classList.toggle('active', id === idx)
-                    })
-                    if(id === role.length) {return }
+                    jumpToPoster(id)
+                    if(id >= role.length || id < 0) {return }
                     document.querySelector('#mainContent h1').innerHTML = role[id][0]
                     document.querySelector('#mainContent h2').innerHTML = role[id][1]
                 }.bind(this), 200);
             })
+            function jumpToPoster(id) {
+                const container = document.querySelector('.container')
+                let scale = container.clientWidth <= 500 
+                    ? 0.75 
+                    : container.clientWidth <= 900 
+                        ? 0.6
+                        : 0.2
+                container.scroll(container.clientWidth * scale * id, 0)
+                document.querySelectorAll('.actionDots .dot').forEach((dot, idx) => {
+                    dot.classList.toggle('active', id === idx)
+                })
+            }
         </script>
     </body>
 </html>

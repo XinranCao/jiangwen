@@ -224,7 +224,7 @@ header ul {
     overflow-x: scroll;
     scroll-behavior: smooth;
     width: 100%;
-    padding: 0 40px 0;
+    padding: 0 12.5%;
       /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -236,7 +236,7 @@ header ul {
 }
   
 #mainContent .container .poster {
-    min-width: max(75vw, 200px);
+    min-width: max(75vw, 240px);
     scroll-snap-align: center;
     display: block;
     position: relative;
@@ -247,6 +247,7 @@ header ul {
     filter: blur(2px);
     transform: scale(0.8);
     transition: 0.2s all ease;
+    cursor: pointer;
 }
 
 #reminder {
@@ -257,6 +258,7 @@ header ul {
 #mainContent .container .poster .active {
     transform: none;
     filter: none;
+    cursor: unset;
 }
 
 #mainContent .actionDots {
@@ -267,7 +269,7 @@ header ul {
     padding: 16px 0 8px 0;
 }
 
-#mainContent .actionDots a{
+#mainContent .actionDots .dot{
     margin: 0 4px;
     height: 10px;
     width: 10px;
@@ -275,6 +277,7 @@ header ul {
     background-color: white;
     opacity: 0.6;
     transition: 0.2s all ease;
+    cursor: pointer;
 }
 
 #mainContent .actionDots .active{
@@ -607,7 +610,7 @@ header ul {
     }
 
     #mainContent .container {
-        padding: 0 220px 0;
+        padding: 0 20%;
         margin-bottom: 16px;
     }
 
@@ -628,7 +631,7 @@ header ul {
         min-width: 200px;
     }
 
-    #mainContent .actionDots a {
+    #mainContent .actionDots .dot {
         margin: 0 8px;
         width: 16px;
         height: 16px;
@@ -771,6 +774,24 @@ header ul {
         object-fit: contain;
     }
 
+    #mainContent {
+        justify-content: center;
+    }
+
+    #mainContent h1 {
+        font-size: 40px;
+    }
+
+    #mainContent h2 {
+        font-size: 24px;
+    }
+
+    #mainContent .actionDots .dot {
+        margin: 0 4px;
+        width: 10px;
+        height: 10px;
+    }
+
     #gallery .movieContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -826,11 +847,12 @@ header ul {
     }
 
     #mainContent .container {
-        padding: 0 500px;
+        padding: 0 40%;
+        margin-bottom: 0;
     }
 
     #mainContent .container .poster {
-        min-width: max(20vw, 240px);    
+        min-width: 20vw;    
     }
 }
 
