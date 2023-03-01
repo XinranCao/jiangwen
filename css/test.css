@@ -525,11 +525,11 @@ header ul {
 
 #aboutInfo h1 {
     text-transform: uppercase;
-    font-size: max(36px, 6vw);
     font-weight: 900;
     margin: 16px 0 24px;     
     font-family: "gitan-latin", Arial, Helvetica, sans-serif;
     color: #FD3F53;
+    text-align: center;
 }
 
 #aboutInfo p {
@@ -635,28 +635,28 @@ header ul {
     }
 
     #gallery .movieTitle {
-        font-size: max(20px, 4vw);
+        font-size: 32px;
+        bottom: 64px;
     }
 
     #gallery .movieTag {
-        font-size: max(18px, 2.4vw);
+        font-size: 18px;
     }
 
     #gallery .moreInfo h2 {
-        font-size: max(16px, 2vw);
+        font-size: 20px;
     }
 
     #gallery .movieIntro, #gallery .director, #gallery .star {
-        font-size: max(16px, 1.8vw);
-
+        font-size: 16px;
     }
 
     #aboutInfo {
-        font-size: max(16px, 1.8vw);  
+        font-size: 16px;  
     }
 
     #aboutInfo h1 {
-        font-size: max(20px, 3.6vw);  
+        font-size: 22px;  
     }
 
     #aboutInfo span {
@@ -687,7 +687,16 @@ header ul {
     }
 
     #infoContainer {
-        font-size: max(16px, 2vw);
+        font-size: 16px;
+        margin: 48px 96px 0 64px;
+    }
+
+    #infoContainer h2 {
+        font-size: 20px !important;
+    }
+
+    #infoContainer .videoSource {
+        font-size: 18px;
     }
 
     #imgCover {
@@ -699,12 +708,13 @@ header ul {
     }
 
     #backgroundInfo {
-        padding: 0 24px 28px;
+        padding: 0 96px 0 48px;
         width: 60%;
+        transform: translateY(-20%);
     }
 
     #backgroundInfo h1 {
-        font-size: max(32px, 6vw);
+        font-size: 32px;
         margin: 16px 0;
     }
 
@@ -713,12 +723,11 @@ header ul {
     }
 
     #roles span {
-        font-size: 18px;
-        font-size: max(16px, 2.4vw);  
+        font-size: 20px;  
     }
 
     #quote {
-        font-size: max(16px, 3vw);  
+        font-size: 18px;  
     }
 
     #externalLinks {
@@ -734,6 +743,15 @@ header ul {
 
     .iframeContainer iframe {
         width: 100%;
+    }
+
+    #infoContainer .videoSource svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #aboutInfo {
+        margin: 0 64px;
     }
 }
 
@@ -751,6 +769,47 @@ header ul {
     #cover #gallery img {
         width: 15%;
         object-fit: contain;
+    }
+
+    #gallery .movieContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 32px;
+    }
+
+    #gallery .movieContainer .basicInfo {
+        align-self: baseline;
+    }
+
+    #gallery .movieContainer .moreInfo {
+        margin: 0 16px;
+    }
+
+    #gallery .movieContainer .moreInfo h2:first-child {
+        margin-top: 0;
+    }
+
+    #infoContainer h2 {
+        font-size: max(18px, 3vw);
+    }
+
+    #backgroundInfo h1 {
+        font-size: 64px;
+    }
+
+    #backgroundInfo {
+        width: 50%;
+        transform: translateY(-40%);
+    }
+
+    #externalLinks {
+        padding: 0 40px;
+        grid-template-rows: 10vw;
+        margin: 32px 0 40px;
+    }
+
+    #aboutInfo {
+        margin: 0 128px;
     }
 }
 
