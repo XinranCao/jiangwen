@@ -789,8 +789,16 @@ header ul {
         margin-top: 0;
     }
 
-    #infoContainer h2 {
-        font-size: max(18px, 3vw);
+    #infoContainer {
+        display: grid;
+        column-gap: 76px;
+        row-gap: 32px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #infoContainer .infoSection:last-child {
+        grid-column: span 2;
     }
 
     #backgroundInfo h1 {
@@ -802,14 +810,27 @@ header ul {
         transform: translateY(-40%);
     }
 
+    #biography {
+        margin-top: 20px;
+        display: block;
+    }
+
     #externalLinks {
-        padding: 0 40px;
         grid-template-rows: 10vw;
-        margin: 32px 0 40px;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0;
     }
 
     #aboutInfo {
         margin: 0 128px;
+    }
+
+    #mainContent .container {
+        padding: 0 500px;
+    }
+
+    #mainContent .container .poster {
+        min-width: max(20vw, 240px);    
     }
 }
 
