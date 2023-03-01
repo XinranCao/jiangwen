@@ -241,12 +241,12 @@ header ul {
     display: block;
     position: relative;
     user-select: none;
-    transition: 0.2s all ease;
 }
 
 #mainContent .container .poster img {
     filter: blur(2px);
     transform: scale(0.8);
+    transition: 0.2s all ease;
 }
 
 #reminder {
