@@ -842,12 +842,12 @@ header ul {
 
 @media (min-aspect-ratio: 0.9) {
     #mainContent .container {
-        padding: 0 40%;
+        padding: 0 35%;
         margin-bottom: 0;
     }
 
     #mainContent .container .poster {
-        min-width: 20vw;    
+        min-width: 30vw;    
     }
 
     #mainContent .actionDots .dot {
@@ -860,6 +860,15 @@ header ul {
 @media (min-aspect-ratio: 1.5) {
     #mainContent {
         justify-content: center;
+    }
+
+    #mainContent .container {
+        padding: 0 40%;
+        margin-bottom: 0;
+    }
+
+    #mainContent .container .poster {
+        min-width: 20vw;    
     }
 }
 

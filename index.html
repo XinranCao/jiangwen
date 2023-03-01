@@ -148,13 +148,16 @@
 
             container.addEventListener('scroll', function() {
                 const screenRatio = window.innerWidth / window.innerHeight;
+                console.log(screenRatio)
                 if(timeout !== null) clearTimeout(timeout);
                 timeout = setTimeout(function() {
                     let scale = screenRatio <= 0.625
                         ? 0.75 
                         : screenRatio <= 0.9
                             ? 0.5
-                            : 0.2
+                            : screenRatio <= 1.2
+                                ? 0.3
+                                : 0.2
                     let id = Math.round(container.scrollLeft / (container.clientWidth * scale));
                     document.querySelectorAll('.poster img').forEach((poster, idx) => {
                         poster.classList.toggle('active', id === idx)
@@ -172,7 +175,9 @@
                     ? 0.75 
                     : screenRatio <= 0.9
                         ? 0.5
-                        : 0.2
+                        : screenRatio <= 1.2
+                            ? 0.3
+                            : 0.2
                 container.scroll(container.clientWidth * scale * id, 0)
                 document.querySelectorAll('.actionDots .dot').forEach((dot, idx) => {
                     dot.classList.toggle('active', id === idx)
