@@ -74,52 +74,40 @@
             </div>
             <div class="carousel">
                 <div class="container" tabindex="0">
-                    <div class="poster active">
-                        <div id="poster_0"></div>
-                        <img alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
+                    <div class="poster" id="poster_0">
+                        <img class="active" alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_1"></div>
+                    <div class="poster" id="poster_1">
                         <img alt="devils on the door step" src="img/gallery/devilsonthedoorstep/poster_00.jpg" width="100%">
                     </div>               
-                    <div class="poster">
-                        <div id="poster_2"></div>
+                    <div class="poster" id="poster_2">
                         <img alt="the sun also rises" src="img/gallery/thesunalsorises/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_3"></div>
+                    <div class="poster" id="poster_3">
                         <img alt="green tea" src="img/gallery/greentea/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_4"></div>
+                    <div class="poster" id="poster_4">
                         <img alt="hibiscues town" src="img/gallery/hibiscustown/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_5"></div>
+                    <div class="poster" id="poster_5">
                         <img alt="hidden man" src="img/gallery/hiddenman/poster_02.jpg" width="100%">
                     </div>                
-                    <div class="poster">
-                        <div id="poster_6"></div>
+                    <div class="poster" id="poster_6">
                         <img alt="in the heat of the sun" src="img/gallery/intheheatofthesun/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_7"></div>
+                    <div class="poster" id="poster_7">
                         <img alt="keep cool" src="img/gallery/keepcool/poster_01.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_8"></div>
+                    <div class="poster" id="poster_8">
                         <img alt="letter from an unknown woman" src="img/gallery/letterfromanunknownwoman/poster_00.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_9"></div>
+                    <div class="poster" id="poster_9">
                         <img alt="red sorghum" src="img/gallery/redsorghum/poster_02.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_10"></div>
+                    <div class="poster" id="poster_10">
                         <img alt="the missing gun" src="img/gallery/themissinggun/poster_01.jpg" width="100%">
                     </div>
-                    <div class="poster">
-                        <div id="poster_11"></div>
+                    <div class="poster" id="poster_11">
                         <img alt="gone with the bullets" src="img/gallery/gonewiththebullets/poster_00.jpg" width="100%">
                     </div>
                     <div id="reminder"></div>
@@ -161,7 +149,7 @@
                 timeout = setTimeout(function() {
                     let scale = this.clientWidth <= 500 ? 0.75 : 0.6
                     let id = Math.round(this.scrollLeft / (this.clientWidth * scale));
-                    document.querySelectorAll('.poster').forEach((poster, idx) => {
+                    document.querySelectorAll('.poster img').forEach((poster, idx) => {
                         poster.classList.toggle('active', id === idx)
                     })
                     document.querySelectorAll('.actionDots a').forEach((a, idx) => {

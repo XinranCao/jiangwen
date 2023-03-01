@@ -240,17 +240,21 @@ header ul {
     scroll-snap-align: center;
     display: block;
     position: relative;
-    transform: scale(0.8);
-    filter: blur(2px);
     user-select: none;
     transition: 0.2s all ease;
+}
+
+#mainContent .container .poster img {
+    filter: blur(2px);
+    transform: scale(0.8);
 }
 
 #mainContent .container .poster div {
     position: absolute;
     height: 40px;
-    width: 100%;
-    left: 0px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #reminder {
@@ -258,7 +262,7 @@ header ul {
     user-select: none;
 }
 
-#mainContent .container .active {
+#mainContent .container .poster .active {
     transform: none;
     filter: none;
 }
@@ -617,6 +621,9 @@ header ul {
 
     #mainContent .container .poster {
         min-width: max(60vw, 240px);    
+    }
+
+    #mainContent .container .poster img {
         filter: blur(4px) brightness(0.8);
     }
 
