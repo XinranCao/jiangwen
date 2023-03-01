@@ -245,7 +245,7 @@ header ul {
 
 #mainContent .container .poster img {
     filter: blur(2px);
-    /* transform: scale(0.8); */
+    transform: scale(0.8);
     transition: 0.2s all ease;
 }
 
@@ -630,8 +630,6 @@ header ul {
 
     #mainContent .actionDots a {
         margin: 0 8px;
-        width: 16px;
-        height: 16px;
     }
 
     #gallery .movieTitle {
