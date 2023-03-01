@@ -630,6 +630,8 @@ header ul {
 
     #mainContent .actionDots a {
         margin: 0 8px;
+        width: 16px;
+        height: 16px;
     }
 
     #gallery .movieTitle {
