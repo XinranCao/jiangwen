@@ -200,7 +200,7 @@ header ul {
 #mainContent h1 {
     font-family: hellofont-id-yongshengcusong, sans-serif;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 40px;
     font-style: normal;
     user-select: none;
     z-index: 1;
@@ -211,7 +211,7 @@ header ul {
     font-family: canto, serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 40px;
+    font-size: 24px;
     user-select: none;
     z-index: 1;
     color: red;
@@ -609,34 +609,6 @@ header ul {
         transform: translateY(-60px);
     }
 
-    #mainContent .container {
-        padding: 0 20%;
-        margin-bottom: 16px;
-    }
-
-    #mainContent .container .poster {
-        min-width: max(60vw, 240px);    
-    }
-
-    #mainContent .container .poster img {
-        filter: blur(4px) brightness(0.8);
-    }
-
-    #mainContent .container .active {
-        transform: none;
-        filter: none;
-    }
-    
-    #reminder {
-        min-width: 200px;
-    }
-
-    #mainContent .actionDots .dot {
-        margin: 0 8px;
-        width: 16px;
-        height: 16px;
-    }
-
     #gallery .movieTitle {
         font-size: 32px;
         bottom: 64px;
@@ -675,13 +647,8 @@ header ul {
         min-width: 360px;
     }
 
-    #aboutInfo span, #aboutInfo form label {
-        font-size: max(16px, 1.2vw);  
-    }
-
     #aboutInfo form button {
         height: 36px;
-        font-size: max(16px, 1.2vw);  
     }
 
     #infoHeader {
@@ -774,18 +741,6 @@ header ul {
         object-fit: contain;
     }
 
-    #mainContent {
-        justify-content: center;
-    }
-
-    #mainContent h1 {
-        font-size: 40px;
-    }
-
-    #mainContent h2 {
-        font-size: 24px;
-    }
-
     #mainContent .actionDots .dot {
         margin: 0 4px;
         width: 10px;
@@ -845,7 +800,47 @@ header ul {
     #aboutInfo {
         margin: 0 128px;
     }
+}
 
+@media (min-aspect-ratio: 0.625) {
+    #mainContent h1 {
+        font-size: 52px;
+    }
+
+    #mainContent h2 {
+        font-size: 28px;
+    }
+
+    #mainContent .container {
+        padding: 0 25%;
+        margin-bottom: 16px;
+    }
+
+    #mainContent .container .poster {
+        min-width: max(50vw, 240px);    
+    }
+
+    #mainContent .container .poster img {
+        filter: blur(4px) brightness(0.8);
+    }
+
+    #mainContent .container .active {
+        transform: none;
+        filter: none;
+    }
+
+    #reminder {
+        min-width: 200px;
+    }
+
+    #mainContent .actionDots .dot {
+        margin: 0 8px;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (min-aspect-ratio: 0.9) {
     #mainContent .container {
         padding: 0 40%;
         margin-bottom: 0;
@@ -853,6 +848,18 @@ header ul {
 
     #mainContent .container .poster {
         min-width: 20vw;    
+    }
+
+    #mainContent .actionDots .dot {
+        margin: 0 4px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (min-aspect-ratio: 1.5) {
+    #mainContent {
+        justify-content: center;
     }
 }
 
