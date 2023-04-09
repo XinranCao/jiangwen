@@ -1,187 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/favicon.jpg">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" type="text/css" href="./css/html5reset.css">
-        <link rel="stylesheet" type="text/css" href="./css/test.css">
-        <title>Home</title>
-        <script src="https://kit.fontawesome.com/6bfcf705b3.js" crossorigin="anonymous"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZM5MZV2D0W');
-        </script>
-        <script>
-            //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-            // solves the problem of mobile web broswer nav bar blocking the content
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="./css/html5reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/test.css" />
+    <title>Home</title>
+    <script
+      src="https://kit.fontawesome.com/6bfcf705b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"
+    ></script>
 
-            // We listen to the resize event
-            window.addEventListener('resize', () => {
-                // We execute the same script as before
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-            });
-            (function(d) {
-              var config = {
-                kitId: 'yrm6ikz',
-                scriptTimeout: 3000,
-                async: true
-              },
-              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-            })(document);
+    <!-- Google Analytics tracking code -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZM5MZV2D0W");
+    </script>
+    <script>
+      // https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+      // Solves the problem of mobile web broswer nav bar blocking the content
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-            function showNav() {
-                const nav = document.querySelector('nav')
-                nav.classList.toggle('responsive')
-            }
-          </script>
-    </head>
+      // Listen to the resize event
+      window.addEventListener("resize", () => {
+        // Execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
 
-    <body id="new_page">
-        <a class = "skip" href="#mainContent" aria-label="Jump to Main Content">Jump to Main Content</a>
-        <header>
-            <nav>
-                <a href="index.html" class="active">HOME</a>
-                <a href="movies.html">MOVIES</a>
-                <a href="more.html">MORE</a>
-                <a href="about.html">ABOUT</a>
-                <a href="javascript:void(0);" class="icon" onclick="showNav()" aria-label="expand menu"><i class="fa fa-bars"></i></a>
-            </nav>
-        </header>
+      // Imported fonts
+      (function (d) {
+        var config = {
+            kitId: "yrm6ikz",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
 
-        <div id="cover">
-            <h1>姜文</h1>
-            <h2>JIANG WEN</h2>
-            <div id="scrollHint">
-                <a href="#mainContent" aria-label="Jump to Main Content">
-                    <svg t="1674566987952" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="865" width="64" height="64"><path d="M512.6144 679.0656a32.2048 32.2048 0 0 1-18.1248-5.632L101.5296 403.3536a32 32 0 0 1 36.2496-52.7872l374.8352 257.6384 373.76-257.5872a32 32 0 0 1 36.3008 52.6848l-391.68 270.08a31.7952 31.7952 0 0 1-18.3808 5.6832z" p-id="866" fill="#ffffff"></path></svg>
-                </a>
-            </div>
+      /**
+       * This function toggles "responsive" classname for navigation bar
+       * In mobile view, when the menu icon is click, the responsive nav should be visible
+       *
+       */
+      function showNav() {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("responsive");
+      }
+    </script>
+  </head>
+
+  <body id="new_page">
+    <a class="skip" href="#mainContent" aria-label="Jump to Main Content"
+      >Jump to Main Content</a
+    >
+    <header>
+      <nav>
+        <a href="index.html" class="active">HOME</a>
+        <a href="movies.html">MOVIES</a>
+        <a href="more.html">MORE</a>
+        <a href="about.html">ABOUT</a>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="showNav()"
+          aria-label="expand menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </nav>
+    </header>
+
+    <div id="cover">
+      <h1>姜文</h1>
+      <h2>JIANG WEN</h2>
+      <div id="scrollHint">
+        <a href="#mainContent" aria-label="Jump to Main Content">
+          <svg
+            t="1674566987952"
+            class="icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="865"
+            width="64"
+            height="64"
+          >
+            <path
+              d="M512.6144 679.0656a32.2048 32.2048 0 0 1-18.1248-5.632L101.5296 403.3536a32 32 0 0 1 36.2496-52.7872l374.8352 257.6384 373.76-257.5872a32 32 0 0 1 36.3008 52.6848l-391.68 270.08a31.7952 31.7952 0 0 1-18.3808 5.6832z"
+              p-id="866"
+              fill="#ffffff"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <main id="mainContent">
+      <div class="title">
+        <h1>导演作品</h1>
+        <h2>DIRECTOR</h2>
+      </div>
+      <div class="carousel">
+        <div class="container" tabindex="0">
+          <div class="poster" onclick="jumpToPoster(0)">
+            <img
+              id="poster_0"
+              class="active"
+              alt="let the bullets fly"
+              src="img/gallery/letthebulletsfly/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(1)">
+            <img
+              id="poster_1"
+              alt="devils on the door step"
+              src="img/gallery/devilsonthedoorstep/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(2)">
+            <img
+              id="poster_2"
+              alt="the sun also rises"
+              src="img/gallery/thesunalsorises/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(3)">
+            <img
+              id="poster_3"
+              alt="green tea"
+              src="img/gallery/greentea/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(4)">
+            <img
+              id="poster_4"
+              alt="hibiscues town"
+              src="img/gallery/hibiscustown/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(5)">
+            <img
+              id="poster_5"
+              alt="hidden man"
+              src="img/gallery/hiddenman/poster_02.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(6)">
+            <img
+              id="poster_6"
+              alt="in the heat of the sun"
+              src="img/gallery/intheheatofthesun/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(7)">
+            <img
+              id="poster_7"
+              alt="keep cool"
+              src="img/gallery/keepcool/poster_01.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(8)">
+            <img
+              id="poster_8"
+              alt="letter from an unknown woman"
+              src="img/gallery/letterfromanunknownwoman/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(9)">
+            <img
+              id="poster_9"
+              alt="red sorghum"
+              src="img/gallery/redsorghum/poster_02.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(10)">
+            <img
+              id="poster_10"
+              alt="the missing gun"
+              src="img/gallery/themissinggun/poster_01.jpg"
+              width="100%"
+            />
+          </div>
+          <div class="poster" onclick="jumpToPoster(11)">
+            <img
+              id="poster_11"
+              alt="gone with the bullets"
+              src="img/gallery/gonewiththebullets/poster_00.jpg"
+              width="100%"
+            />
+          </div>
+          <div id="reminder"></div>
         </div>
-        <main id="mainContent">
-            <div class="title">
-                <h1>导演作品</h1>
-                <h2>DIRECTOR</h2>
-            </div>
-            <div class="carousel">
-                <div class="container" tabindex="0">
-                    <div class="poster" onclick="jumpToPoster(0)">
-                        <img id="poster_0" class="active" alt="let the bullets fly" src="img/gallery/letthebulletsfly/poster_00.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(1)">
-                        <img id="poster_1" alt="devils on the door step" src="img/gallery/devilsonthedoorstep/poster_00.jpg" width="100%">
-                    </div>               
-                    <div class="poster" onclick="jumpToPoster(2)">
-                        <img id="poster_2" alt="the sun also rises" src="img/gallery/thesunalsorises/poster_00.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(3)">
-                        <img id="poster_3" alt="green tea" src="img/gallery/greentea/poster_00.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(4)">
-                        <img id="poster_4" alt="hibiscues town" src="img/gallery/hibiscustown/poster_00.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(5)">
-                        <img id="poster_5" alt="hidden man" src="img/gallery/hiddenman/poster_02.jpg" width="100%">
-                    </div>                
-                    <div class="poster" onclick="jumpToPoster(6)">
-                        <img id="poster_6" alt="in the heat of the sun" src="img/gallery/intheheatofthesun/poster_00.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(7)">
-                        <img id="poster_7" alt="keep cool" src="img/gallery/keepcool/poster_01.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(8)">
-                        <img id="poster_8" alt="letter from an unknown woman" src="img/gallery/letterfromanunknownwoman/poster_00.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(9)">
-                        <img id="poster_9" alt="red sorghum" src="img/gallery/redsorghum/poster_02.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(10)">
-                        <img id="poster_10" alt="the missing gun" src="img/gallery/themissinggun/poster_01.jpg" width="100%">
-                    </div>
-                    <div class="poster" onclick="jumpToPoster(11)">
-                        <img id="poster_11" alt="gone with the bullets" src="img/gallery/gonewiththebullets/poster_00.jpg" width="100%">
-                    </div>
-                    <div id="reminder"></div>
-                </div>
-                <div class="actionDots">
-                    <div class="dot active" onclick="jumpToPoster(0)"></div>
-                    <div class="dot" onclick="jumpToPoster(1)"></div>
-                    <div class="dot" onclick="jumpToPoster(2)"></div>
-                    <div class="dot" onclick="jumpToPoster(3)"></div>
-                    <div class="dot" onclick="jumpToPoster(4)"></div>
-                    <div class="dot" onclick="jumpToPoster(5)"></div>
-                    <div class="dot" onclick="jumpToPoster(6)"></div>
-                    <div class="dot" onclick="jumpToPoster(7)"></div>
-                    <div class="dot" onclick="jumpToPoster(8)"></div>
-                    <div class="dot" onclick="jumpToPoster(9)"></div>
-                    <div class="dot" onclick="jumpToPoster(10)"></div>
-                    <div class="dot" onclick="jumpToPoster(11)"></div>
-                </div>
-            </div>  
-        </main>
-        <script>
-            const role = [
-                ['导演作品', 'DIRECTOR'],
-                ['导演作品', 'DIRECTOR'],
-                ['导演作品', 'DIRECTOR'],
-                ['主演作品', 'LEAD'],
-                ['主演作品', 'LEAD'],
-                ['导演作品', 'DIRECTOR'],
-                ['导演作品', 'DIRECTOR'],
-                ['主演作品', 'LEAD'],
-                ['主演作品', 'LEAD'],
-                ['主演作品', 'LEAD'],
-                ['主演作品', 'LEAD'],
-                ['导演作品', 'DIRECTOR']
-            ]
-            let timeout = null;
-            const container = document.querySelector('.container')
+        <div class="actionDots">
+          <div class="dot active" onclick="jumpToPoster(0)"></div>
+          <div class="dot" onclick="jumpToPoster(1)"></div>
+          <div class="dot" onclick="jumpToPoster(2)"></div>
+          <div class="dot" onclick="jumpToPoster(3)"></div>
+          <div class="dot" onclick="jumpToPoster(4)"></div>
+          <div class="dot" onclick="jumpToPoster(5)"></div>
+          <div class="dot" onclick="jumpToPoster(6)"></div>
+          <div class="dot" onclick="jumpToPoster(7)"></div>
+          <div class="dot" onclick="jumpToPoster(8)"></div>
+          <div class="dot" onclick="jumpToPoster(9)"></div>
+          <div class="dot" onclick="jumpToPoster(10)"></div>
+          <div class="dot" onclick="jumpToPoster(11)"></div>
+        </div>
+      </div>
+    </main>
+    <script>
+      // Data list for roles of Jiang Wen's works
+      const role = [
+        ["导演作品", "DIRECTOR"],
+        ["导演作品", "DIRECTOR"],
+        ["导演作品", "DIRECTOR"],
+        ["主演作品", "LEAD"],
+        ["主演作品", "LEAD"],
+        ["导演作品", "DIRECTOR"],
+        ["导演作品", "DIRECTOR"],
+        ["主演作品", "LEAD"],
+        ["主演作品", "LEAD"],
+        ["主演作品", "LEAD"],
+        ["主演作品", "LEAD"],
+        ["导演作品", "DIRECTOR"],
+      ];
 
-            container.addEventListener('scroll', function() {
-                const screenRatio = window.innerWidth / window.innerHeight;
-                if(timeout !== null) clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    let scale = screenRatio <= 0.625
-                        ? 0.75 
-                        : screenRatio <= 0.9
-                            ? 0.5
-                            : screenRatio <= 1.5
-                                ? 0.3
-                                : 0.2
-                    let id = Math.round(container.scrollLeft / (container.clientWidth * scale));
-                    document.querySelectorAll('.poster img').forEach((poster, idx) => {
-                        poster.classList.toggle('active', id === idx)
-                    })
-                    jumpToPoster(id)
-                    if(id >= role.length || id < 0) {return }
-                    document.querySelector('#mainContent h1').innerHTML = role[id][0]
-                    document.querySelector('#mainContent h2').innerHTML = role[id][1]
-                }.bind(this), 200);
-            })
-            function jumpToPoster(id) {
-                const screenRatio = window.innerWidth / window.innerHeight;
-                const container = document.querySelector('.container')
-                let scale = screenRatio <= 0.625
-                    ? 0.75 
-                    : screenRatio <= 0.9
-                        ? 0.5
-                        : screenRatio <= 1.5
-                            ? 0.3
-                            : 0.2
-                container.scroll(container.clientWidth * scale * id, 0)
-                document.querySelectorAll('.actionDots .dot').forEach((dot, idx) => {
-                    dot.classList.toggle('active', id === idx)
-                })
+      // This is a debounce method
+      // Making sure the continuous scrolling does not trigger jumping to posters
+      // until a certain amount of time has elapsed
+      let timeout = null;
+      const container = document.querySelector(".container");
+      container.addEventListener("scroll", function () {
+        const screenRatio = window.innerWidth / window.innerHeight;
+        if (timeout !== null) clearTimeout(timeout);
+        timeout = setTimeout(
+          function () {
+            let scale =
+              screenRatio <= 0.625
+                ? 0.75
+                : screenRatio <= 0.9
+                ? 0.5
+                : screenRatio <= 1.5
+                ? 0.3
+                : 0.2;
+            let id = Math.round(
+              container.scrollLeft / (container.clientWidth * scale)
+            );
+            document.querySelectorAll(".poster img").forEach((poster, idx) => {
+              poster.classList.toggle("active", id === idx);
+            });
+            jumpToPoster(id);
+            if (id >= role.length || id < 0) {
+              return;
             }
-        </script>
-    </body>
+            document.querySelector("#mainContent h1").innerHTML = role[id][0];
+            document.querySelector("#mainContent h2").innerHTML = role[id][1];
+          }.bind(this),
+          200
+        );
+      });
+
+      /**
+       * Calculate which poster should be centered according to the screen ratio
+       * and scroll the screen to center the poster
+       * and activate special styling for corresponding action dot
+       *
+       * @param {id} the index of the target poster
+       */
+      function jumpToPoster(id) {
+        const screenRatio = window.innerWidth / window.innerHeight;
+        const container = document.querySelector(".container");
+        let scale =
+          screenRatio <= 0.625
+            ? 0.75
+            : screenRatio <= 0.9
+            ? 0.5
+            : screenRatio <= 1.5
+            ? 0.3
+            : 0.2;
+        container.scroll(container.clientWidth * scale * id, 0);
+        document.querySelectorAll(".actionDots .dot").forEach((dot, idx) => {
+          dot.classList.toggle("active", id === idx);
+        });
+      }
+    </script>
+  </body>
 </html>
