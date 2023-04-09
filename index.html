@@ -273,10 +273,14 @@
       let timeout = null;
       const container = document.querySelector(".container");
       container.addEventListener("scroll", function () {
+        // calculate screen ratio
         const screenRatio = window.innerWidth / window.innerHeight;
         if (timeout !== null) clearTimeout(timeout);
+        // only execute the function once in 200ms
         timeout = setTimeout(
           function () {
+            // scale is used to calculate which poster should be centered
+            // because the width of poster varies based on different screen ratio
             let scale =
               screenRatio <= 0.625
                 ? 0.75
@@ -288,13 +292,16 @@
             let id = Math.round(
               container.scrollLeft / (container.clientWidth * scale)
             );
+            // toggle the special style for posters
             document.querySelectorAll(".poster img").forEach((poster, idx) => {
               poster.classList.toggle("active", id === idx);
             });
+            // scroll to the target poster
             jumpToPoster(id);
             if (id >= role.length || id < 0) {
               return;
             }
+            // Update title corresponding to the target poster
             document.querySelector("#mainContent h1").innerHTML = role[id][0];
             document.querySelector("#mainContent h2").innerHTML = role[id][1];
           }.bind(this),
@@ -310,8 +317,11 @@
        * @param {id} the index of the target poster
        */
       function jumpToPoster(id) {
+        // calculate screen ratio
         const screenRatio = window.innerWidth / window.innerHeight;
         const container = document.querySelector(".container");
+        // scale is used to calculate which poster should be centered
+        // because the width of poster varies based on different screen ratio
         let scale =
           screenRatio <= 0.625
             ? 0.75
