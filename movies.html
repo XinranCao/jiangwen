@@ -29,7 +29,7 @@
     </script>
     <script>
       //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-      // solves the problem of mobile web broswer nav bar blocking the content
+      // Solves the problem of mobile web broswer nav bar blocking the content
       let vh = window.innerHeight * 0.01;
       // Then we set the value in the --vh custom property to the root of the document
       document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -40,6 +40,8 @@
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
       });
+
+      // Imported fonts
       (function (d) {
         var config = {
             kitId: "yrm6ikz",
@@ -69,6 +71,12 @@
         };
         s.parentNode.insertBefore(tk, s);
       })(document);
+
+      /**
+       * This function toggles "responsive" classname for navigation bar
+       * In mobile view, when the menu icon is click, the responsive nav should be visible
+       *
+       */
       function showNav() {
         const nav = document.querySelector("nav");
         nav.classList.toggle("responsive");
