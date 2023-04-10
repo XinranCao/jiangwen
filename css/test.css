@@ -697,9 +697,9 @@ header ul {
   }
 
   #backgroundInfo {
-    padding: 0 96px 0 48px;
+    padding: 0 48px;
     width: 60%;
-    transform: translateY(-20%);
+    transform: translateY(-4vh);
   }
 
   #backgroundInfo h1 {
@@ -800,11 +800,11 @@ header ul {
   }
 
   #backgroundInfo {
-    transform: translateY(-40%);
+    transform: translateY(-8vh);
   }
 
   #quote {
-    width: 50%;
+    width: 80%;
   }
 
   #biography {
