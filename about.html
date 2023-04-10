@@ -1,94 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/favicon.jpg">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" type="text/css" href="./css/html5reset.css">
-        <link rel="stylesheet" type="text/css" href="./css/test.css">
-        <title>About</title>
-        <script src="https://kit.fontawesome.com/6bfcf705b3.js" crossorigin="anonymous"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZM5MZV2D0W');
-        </script>
-        <script>
-            //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-            // solves the problem of mobile web broswer nav bar blocking the content
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="./css/html5reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/test.css" />
+    <title>About</title>
+    <script
+      src="https://kit.fontawesome.com/6bfcf705b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZM5MZV2D0W");
+    </script>
+    <script>
+      //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+      // solves the problem of mobile web broswer nav bar blocking the content
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-            // We listen to the resize event
-            window.addEventListener('resize', () => {
-                // We execute the same script as before
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-            });
-            (function(d) {
-              var config = {
-                kitId: 'yrm6ikz',
-                scriptTimeout: 3000,
-                async: true
-              },
-              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-            })(document);
-            function showNav() {
-                const nav = document.querySelector('nav')
-                nav.classList.toggle('responsive')
-            }
-          </script>
-    </head>
+      // We listen to the resize event
+      window.addEventListener("resize", () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
+      (function (d) {
+        var config = {
+            kitId: "yrm6ikz",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+      function showNav() {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("responsive");
+      }
+    </script>
+  </head>
 
-    <body id="about_page">
-        <header>
-            <nav>
-                <a href="index.html">HOME</a>
-                <a href="movies.html">MOVIES</a>
-                <a href="more.html" >MORE</a>
-                <a href="about.html" class="active">ABOUT</a>
-                <a href="javascript:void(0);" class="icon" onclick="showNav()" aria-label="expand menu"><i class="fa fa-bars"></i></a>
-            </nav>
-        </header>
-        <main id="aboutInfo">
-            <h1>ABOUT</h1>
-            <p>
-                Welcome to this website dedicated to <strong>Director, Actor, and Screenwriter</strong> Jiangwen, a prominent figure in the world of cinema. 
-                Here you'll find information about himself and his movies. If you are interested in exploring more, you will also find some useful links in the more page.
-                Thank you for visiting and hope you enjoy your journey through Jiangwen's cinematic universe.
-            </p>
-            <p>
-                This website is the result of my passion for web development and my admiration for Director Jiangwen's work. 
-                Using <strong>HTML, CSS, and JavaScript</strong>, I designed and built this website from scratch with the aim of showcasing Jiangwen's legacy and making it accessible to a wider audience. 
-                I carefully selected the content and images to provide an informative and visually engaging experience for visitors. I also implemented <strong>responsive design and cross-browser compatibility</strong> to ensure that the website is accessible and user-friendly on any device. 
-               </p>
+  <body id="about_page">
+    <header>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="movies.html">MOVIES</a>
+        <a href="more.html">MORE</a>
+        <a href="about.html" class="active">ABOUT</a>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="showNav()"
+          aria-label="expand menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </nav>
+    </header>
+    <main id="aboutInfo">
+      <h1>ABOUT</h1>
+      <p>
+        Welcome to this website dedicated to
+        <strong>Director, Actor, and Screenwriter</strong> Jiangwen, a prominent
+        figure in the world of cinema. Here you'll find information about
+        himself and his movies. If you are interested in exploring more, you
+        will also find some useful links in the more page. Thank you for
+        visiting and hope you enjoy your journey through Jiangwen's cinematic
+        universe.
+      </p>
+      <p>
+        This website is the result of my passion for web development and my
+        admiration for Director Jiangwen's work. Using
+        <strong>HTML, CSS, and JavaScript</strong>, I designed and built this
+        website from scratch with the aim of showcasing Jiangwen's legacy and
+        making it accessible to a wider audience. I carefully selected the
+        content and images to provide an informative and visually engaging
+        experience for visitors. I also implemented
+        <strong>responsive design and cross-browser compatibility</strong> to
+        ensure that the website is accessible and user-friendly on any device.
+      </p>
 
-            <p>
-                As a self-build website, this project challenged me to learn new skills and techniques, and to experiment with different design choices. 
-                I hope that this website will not only serve as a tribute to Jiangwen's contributions to cinema but also inspire others to pursue their own creative endeavors.
-            </p>
+      <p>
+        As a self-build website, this project challenged me to learn new skills
+        and techniques, and to experiment with different design choices. I hope
+        that this website will not only serve as a tribute to Jiangwen's
+        contributions to cinema but also inspire others to pursue their own
+        creative endeavors.
+      </p>
 
-            <span>If you have any feedback or advice regarding the website, or if you'd like to discuss about Jiangwen's movies, please feel free to get in touch with me!</span>
-            <form
-                id="form"
-                action="https://formspree.io/f/mlevoabd"
-                method="POST"
-                >
-                <label>
-                    Your email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Leave a comment:
-                    <textarea name="message"></textarea>
-                </label>
-                <button type="submit">Send</button>
-            </form>
-        </main>
-    </body>
+      <span
+        >If you have any feedback or advice regarding the website, or if you'd
+        like to discuss about Jiangwen's movies, please feel free to get in
+        touch with me!</span
+      >
+      <form id="form" action="https://formspree.io/f/mlevoabd" method="POST">
+        <label>
+          Your email:
+          <input type="email" name="email" />
+        </label>
+        <label>
+          Leave a comment:
+          <textarea name="message"></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </body>
 </html>
