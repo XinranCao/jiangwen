@@ -1,143 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="img/favicon.jpg">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" type="text/css" href="./css/html5reset.css">
-        <link rel="stylesheet" type="text/css" href="./css/test.css">
-        <title>More</title>
-        <script src="https://kit.fontawesome.com/6bfcf705b3.js" crossorigin="anonymous"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZM5MZV2D0W');
-        </script>
-        <script>
-            //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-            // solves the problem of mobile web broswer nav bar blocking the content
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" type="text/css" href="./css/html5reset.css" />
+    <link rel="stylesheet" type="text/css" href="./css/test.css" />
+    <title>More</title>
+    <script
+      src="https://kit.fontawesome.com/6bfcf705b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZM5MZV2D0W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-ZM5MZV2D0W");
+    </script>
+    <script>
+      //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+      // solves the problem of mobile web broswer nav bar blocking the content
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-            // We listen to the resize event
-            window.addEventListener('resize', () => {
-                // We execute the same script as before
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-            });
-            (function(d) {
-              var config = {
-                kitId: 'yrm6ikz',
-                scriptTimeout: 3000,
-                async: true
-              },
-              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-            })(document);
-            function showNav() {
-                const nav = document.querySelector('nav')
-                nav.classList.toggle('responsive')
-            }
-          </script>
-    </head>
+      // We listen to the resize event
+      window.addEventListener("resize", () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
+      (function (d) {
+        var config = {
+            kitId: "yrm6ikz",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+      function showNav() {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("responsive");
+      }
+    </script>
+  </head>
 
-    <body id="more_page">
-        <header>
-            <nav>
-                <a href="index.html">HOME</a>
-                <a href="movies.html">MOVIES</a>
-                <a href="more.html" class="active">MORE</a>
-                <a href="about.html">ABOUT</a>
-                <a href="javascript:void(0);" class="icon" onclick="showNav()" aria-label="expand menu"><i class="fa fa-bars"></i></a>
-            </nav>
-        </header>
-        <main id="infoMain">
-            <div id="infoHeader">
-                <div id='nameLetters'>
-                    <h1>姜</h1>
-                    <h1>文</h1>
-                </div>
-                <div id="imgCover">
-                    <img alt="Jiang Wen" src="img/jiangwen.png" width="100%"/>
-                </div>
-                <div id="backgroundInfo">
-                    <h1>JIANG WEN</h1>
-                    <div id="roles">
-                        <span>DIRECTOR</span>
-                        <span>ACTOR</span>
-                        <span>SCREENWRITER</span>
-                    </div>
-                    <p id="quote">"What I provide to the audience is never plain water. I want to make wine and get drunk with everyone in the theater."</p>
-                </div>
+  <body id="more_page">
+    <header>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="movies.html">MOVIES</a>
+        <a href="more.html" class="active">MORE</a>
+        <a href="about.html">ABOUT</a>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="showNav()"
+          aria-label="expand menu"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </nav>
+    </header>
+    <main id="infoMain">
+      <div id="infoHeader">
+        <div id="nameLetters">
+          <h1>姜</h1>
+          <h1>文</h1>
+        </div>
+        <div id="imgCover">
+          <img alt="Jiang Wen" src="img/jiangwen.png" width="100%" />
+        </div>
+        <div id="backgroundInfo">
+          <h1>JIANG WEN</h1>
+          <div id="roles">
+            <span>DIRECTOR</span>
+            <span>ACTOR</span>
+            <span>SCREENWRITER</span>
+          </div>
+          <p id="quote">
+            "What I provide to the audience is never plain water. I want to make
+            wine and get drunk with everyone in the theater."
+          </p>
+        </div>
+      </div>
+      <div id="infoContainer">
+        <div class="infoSection">
+          <h2>biography</h2>
+          <span id="biography">
+            Jiang Wen (born 5 January 1963) is a Chinese actor, screenwriter,
+            and director. As a director, he is sometimes grouped with the "Sixth
+            Generation" that emerged in the 1990s. Jiang is also well known
+            internationally as an actor, having starred with Gong Li in Zhang
+            Yimou's debut film Red Sorghum (1986), and more recently as Baze
+            Malbus in the Star Wars film Rogue One (2016). He is the older
+            brother of fellow actor Jiang Wu.
+          </span>
+          <span id="wikiSource"
+            >From
+            <a
+              href="https://en.wikipedia.org/wiki/Jiang_Wen"
+              target="_blank"
+              aria-label="wikipedia"
+              >WikiPedia</a
+            ></span
+          >
+        </div>
+        <div class="infoSection">
+          <h2>Movie Reviews</h2>
+          <div id="externalLinks">
+            <div
+              class="source"
+              style="background-image: url('./img/logos/IMDB_Logo.png')"
+            >
+              <a
+                href="https://www.imdb.com/name/nm0422638/"
+                target="_blank"
+                aria-label="IMDb"
+                >IMDb</a
+              >
             </div>
-            <div id="infoContainer">
-                <div class="infoSection">
-                    <h2>biography</h2>
-                    <span id="biography">
-                        Jiang Wen (born 5 January 1963) is a Chinese actor, screenwriter, and director. As a director, he is sometimes grouped with the "Sixth Generation" that emerged in the 1990s. Jiang is also well known internationally as an actor, having starred with Gong Li in Zhang Yimou's debut film Red Sorghum (1986), and more recently as Baze Malbus in the Star Wars film Rogue One (2016). He is the older brother of fellow actor Jiang Wu.
-                    </span>
-                    <span id="wikiSource">From <a href="https://en.wikipedia.org/wiki/Jiang_Wen" target="_blank" aria-label="wikipedia">WikiPedia</a></span>
-                </div>
-                <div class="infoSection">
-                    <h2>Movie Reviews</h2>
-                    <div id="externalLinks">
-                        <div class="source" style="background-image: url('./img/logos/IMDB_Logo.png')">
-                            <a href="https://www.imdb.com/name/nm0422638/" target="_blank" aria-label="IMDb">IMDb</a>
-                        </div>
-                        <div class="source" style="background-image: url('./img/logos/MUBI_Logo.png')">
-                            <a href="https://mubi.com/cast/jiang-wen" target="_blank" aria-label="MUBI">MUBI</a>
-                        </div>
-                        <div class="source" style="background-image: url('./img/logos/Rotten\ Tomatoes_Logo.jpg')">
-                            <a href="https://www.rottentomatoes.com/celebrity/wen_jiang" target="_blank" aria-label="Rotten Tomatoes">Rotten Tomatoes</a>
-                        </div>
-                        <div class="source" style="background-image: url('./img/logos/TMDB_Logo.jpg')">
-                            <a href="https://www.themoviedb.org/person/77301-jiang-wen?language=en-US" target="_blank" aria-label="TMDB">TMDB</a>
-                        </div>
-                        <div class="source" style="background-image: url('./img/logos/Douban_Icon.png')">
-                            <a href="https://movie.douban.com/celebrity/1021999/" target="_blank" aria-label="douban">Douban</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="infoSection">
-                    <h2>Explore More</h2>
-                    <div id="explore">
-                        <div class="iframeContainer">
-                            <a class="videoSource" href="https://www.youtube.com/live/XXNpsCuKNJo?feature=share" target="_blank" aria-label="TIFF Master Class">
-                                TIFF Master Class
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                viewBox="0,0,256,256"
-                                style="fill:#000000;">
-                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z"></path></g></g>
-                            </svg>
-                        </a>
-                        <iframe title="youtube TIFF Master Class" src="https://www.youtube.com/embed/XXNpsCuKNJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
-                        </div>
-                        <div class="iframeContainer">
-                            <a class="videoSource" href="https://www.bilibili.com/video/BV1yt4y1Q7SS" target="_blank" aria-label="Fanmade Remix">
-                                Fanmade Remix
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                                viewBox="0,0,256,256"
-                                style="fill:#000000;">
-                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z"></path></g></g>
-                            </svg>
-                        </a>
-                        <iframe title="bilibili Fanmade Remix" src="//player.bilibili.com/player.html?aid=626357031&bvid=BV1yt4y1Q7SS&cid=210738676&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-                    </div>
-                </div>
+            <div
+              class="source"
+              style="background-image: url('./img/logos/MUBI_Logo.png')"
+            >
+              <a
+                href="https://mubi.com/cast/jiang-wen"
+                target="_blank"
+                aria-label="MUBI"
+                >MUBI</a
+              >
             </div>
-        </main>
-        <script>
-            document.querySelector('#more_page').addEventListener('scroll', (e)=>{
-                if (e.target.scrollTop > (document.querySelector('#imgCover').clientHeight / 3)) {
-                    document.querySelector('#nameLetters').style.display = 'none'
-                } else {
-                    document.querySelector('#nameLetters').style.display = 'flex'
-                }
-            })
-        </script>
-    </body>
+            <div
+              class="source"
+              style="
+                background-image: url('./img/logos/Rotten\ Tomatoes_Logo.jpg');
+              "
+            >
+              <a
+                href="https://www.rottentomatoes.com/celebrity/wen_jiang"
+                target="_blank"
+                aria-label="Rotten Tomatoes"
+                >Rotten Tomatoes</a
+              >
+            </div>
+            <div
+              class="source"
+              style="background-image: url('./img/logos/TMDB_Logo.jpg')"
+            >
+              <a
+                href="https://www.themoviedb.org/person/77301-jiang-wen?language=en-US"
+                target="_blank"
+                aria-label="TMDB"
+                >TMDB</a
+              >
+            </div>
+            <div
+              class="source"
+              style="background-image: url('./img/logos/Douban_Icon.png')"
+            >
+              <a
+                href="https://movie.douban.com/celebrity/1021999/"
+                target="_blank"
+                aria-label="douban"
+                >Douban</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="infoSection">
+          <h2>Explore More</h2>
+          <div id="explore">
+            <div class="iframeContainer">
+              <a
+                class="videoSource"
+                href="https://www.youtube.com/live/XXNpsCuKNJo?feature=share"
+                target="_blank"
+                aria-label="TIFF Master Class"
+              >
+                TIFF Master Class
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  viewBox="0,0,256,256"
+                  style="fill: #000000"
+                >
+                  <g
+                    fill="#ffffff"
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <g transform="scale(8.53333,8.53333)">
+                      <path
+                        d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <iframe
+                title="youtube TIFF Master Class"
+                src="https://www.youtube.com/embed/XXNpsCuKNJo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="iframeContainer">
+              <a
+                class="videoSource"
+                href="https://www.bilibili.com/video/BV1yt4y1Q7SS"
+                target="_blank"
+                aria-label="Fanmade Remix"
+              >
+                Fanmade Remix
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  viewBox="0,0,256,256"
+                  style="fill: #000000"
+                >
+                  <g
+                    fill="#ffffff"
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <g transform="scale(8.53333,8.53333)">
+                      <path
+                        d="M25.98047,2.99023c-0.03726,0.00118 -0.07443,0.00444 -0.11133,0.00977h-5.86914c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h3.58594l-10.29297,10.29297c-0.26124,0.25082 -0.36648,0.62327 -0.27512,0.97371c0.09136,0.35044 0.36503,0.62411 0.71547,0.71547c0.35044,0.09136 0.72289,-0.01388 0.97371,-0.27512l10.29297,-10.29297v3.58594c-0.0051,0.36064 0.18438,0.69608 0.49587,0.87789c0.3115,0.18181 0.69676,0.18181 1.00825,0c0.3115,-0.18181 0.50097,-0.51725 0.49587,-0.87789v-5.87305c0.04031,-0.29141 -0.04973,-0.58579 -0.24615,-0.80479c-0.19643,-0.219 -0.47931,-0.34042 -0.77338,-0.33192zM6,7c-1.09306,0 -2,0.90694 -2,2v15c0,1.09306 0.90694,2 2,2h15c1.09306,0 2,-0.90694 2,-2v-10v-2.57812l-2,2v2.57813v8h-15v-15h8h2h0.57813l2,-2h-2.57812h-2z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+              <iframe
+                title="bilibili Fanmade Remix"
+                src="//player.bilibili.com/player.html?aid=626357031&bvid=BV1yt4y1Q7SS&cid=210738676&page=1"
+                scrolling="no"
+                border="0"
+                frameborder="no"
+                framespacing="0"
+                allowfullscreen="true"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.querySelector("#more_page").addEventListener("scroll", (e) => {
+        if (
+          e.target.scrollTop >
+          document.querySelector("#imgCover").clientHeight / 3
+        ) {
+          document.querySelector("#nameLetters").style.display = "none";
+        } else {
+          document.querySelector("#nameLetters").style.display = "flex";
+        }
+      });
+    </script>
+  </body>
 </html>
