@@ -699,7 +699,6 @@ header ul {
   #backgroundInfo {
     padding: 0 48px;
     width: 60%;
-    transform: translateY(-4vh);
   }
 
   #backgroundInfo h1 {
@@ -741,6 +740,14 @@ header ul {
 
   #aboutInfo {
     margin: 0 64px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #backgroundInfo {
+    padding: 0 48px;
+    width: 60%;
+    transform: translateY(-4vh);
   }
 }
 
