@@ -476,6 +476,13 @@ header ul {
   text-transform: uppercase;
 }
 
+#wikiSource a:link,
+#wikiSource a:visited,
+#wikiSource a:hover,
+#wikiSource a:active {
+  color: white;
+}
+
 #externalLinks {
   display: grid;
   padding: 0 4px;
