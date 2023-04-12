@@ -862,9 +862,7 @@ header ul {
   }
 
   #mainContent .actionDots .dot {
-    margin: 0 8px;
-    width: 16px;
-    height: 16px;
+    margin: 0 6px;
   }
 }
 
@@ -879,7 +877,7 @@ header ul {
   }
 
   #mainContent .actionDots .dot {
-    margin: 0 4px;
+    margin: 0 8px;
     width: 10px;
     height: 10px;
   }
