@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" type="text/css" href="./css/html5reset.css" />
-    <link rel="stylesheet" type="text/css" href="./css/test.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
     <title>About</title>
     <script
       src="https://kit.fontawesome.com/6bfcf705b3.js"
@@ -85,12 +85,14 @@
   </head>
 
   <body id="about_page">
+    <!-- The header contains a navigation bar -->
     <header>
       <nav>
         <a href="index.html">HOME</a>
         <a href="movies.html">MOVIES</a>
         <a href="more.html">MORE</a>
         <a href="about.html" class="active">ABOUT</a>
+        <!-- menu icon that toggles responsive menu -->
         <a
           href="javascript:void(0);"
           class="icon"
@@ -100,6 +102,7 @@
         ></a>
       </nav>
     </header>
+    <!-- main content of the about page -->
     <main id="aboutInfo">
       <h1>ABOUT</h1>
       <p>
@@ -112,11 +115,9 @@
         universe.
       </p>
       <p>
-        This website is the result of my passion for web development and my
-        admiration for Director Jiangwen's work. Using
-        <strong>HTML, CSS, and JavaScript</strong>, I designed and built this
-        website from scratch with the aim of showcasing Jiangwen's legacy and
-        making it accessible to a wider audience. I carefully selected the
+        Using<strong>HTML, CSS, and JavaScript</strong>, I designed and built
+        this website from scratch with the aim of showcasing Jiangwen's legacy
+        and making it accessible to a wider audience. I carefully selected the
         content and images to provide an informative and visually engaging
         experience for visitors. I also implemented
         <strong>responsive design and cross-browser compatibility</strong> to
@@ -124,11 +125,12 @@
       </p>
 
       <p>
-        As a self-build website, this project challenged me to learn new skills
-        and techniques, and to experiment with different design choices. I hope
-        that this website will not only serve as a tribute to Jiangwen's
-        contributions to cinema but also inspire others to pursue their own
-        creative endeavors.
+        This website is the result of my passion for web development and my
+        admiration for Director Jiangwen's work. As a self-build website, this
+        project challenged me to learn new skills and techniques, and to
+        experiment with different design choices. I hope that this website will
+        not only serve as a tribute to Jiangwen's contributions to cinema but
+        also inspire others to pursue their own creative endeavors.
       </p>
 
       <span
@@ -136,6 +138,7 @@
         like to discuss about Jiangwen's movies, please feel free to get in
         touch with me!</span
       >
+      <!-- contact form, linked to formspree website -->
       <form id="form" action="https://formspree.io/f/mlevoabd" method="POST">
         <label>
           Your email:
@@ -145,7 +148,9 @@
           Leave a comment:
           <textarea name="message"></textarea>
         </label>
-        <button type="submit">Send</button>
+        <div>
+          <button type="submit">Send</button>
+        </div>
       </form>
     </main>
   </body>

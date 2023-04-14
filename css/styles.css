@@ -13,7 +13,7 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "gitan-latin", Arial, Helvetica, sans-serif;
   background-color: #010203;
 }
 
@@ -476,6 +476,13 @@ header ul {
   text-transform: uppercase;
 }
 
+#wikiSource a:link,
+#wikiSource a:visited,
+#wikiSource a:hover,
+#wikiSource a:active {
+  color: white;
+}
+
 #externalLinks {
   display: grid;
   padding: 0 4px;
@@ -592,6 +599,12 @@ header ul {
 
 #aboutInfo form textarea {
   height: 80px;
+  max-width: 740px;
+}
+
+#aboutInfo form div {
+  max-width: 740px;
+  display: flex;
 }
 
 #aboutInfo form button {
@@ -656,14 +669,10 @@ header ul {
   #aboutInfo span {
     display: block;
     margin: auto;
-    width: 60%;
-    min-width: 360px;
   }
 
   #aboutInfo form {
     margin: 32px auto 0;
-    width: 60%;
-    min-width: 360px;
   }
 
   #aboutInfo form button {
@@ -827,6 +836,21 @@ header ul {
 
   #aboutInfo {
     margin: 0 128px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+
+  #aboutInfo h1,
+  #aboutInfo p:first-of-type,
+  #aboutInfo span,
+  #aboutInfo form {
+    grid-column: 1 / span 2;
+  }
+
+  #aboutInfo form label,
+  #aboutInfo form div {
+    width: calc(100vw - 256px);
   }
 }
 
@@ -862,9 +886,7 @@ header ul {
   }
 
   #mainContent .actionDots .dot {
-    margin: 0 8px;
-    width: 16px;
-    height: 16px;
+    margin: 0 6px;
   }
 }
 
@@ -879,7 +901,7 @@ header ul {
   }
 
   #mainContent .actionDots .dot {
-    margin: 0 4px;
+    margin: 0 8px;
     width: 10px;
     height: 10px;
   }
