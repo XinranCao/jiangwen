@@ -599,6 +599,7 @@ header ul {
 
 #aboutInfo form textarea {
   height: 80px;
+  max-width: 740px;
 }
 
 #aboutInfo form button {
@@ -840,6 +841,10 @@ header ul {
   #aboutInfo span,
   #aboutInfo form {
     grid-column: 1 / span 2;
+  }
+
+  #aboutInfo form label {
+    width: calc(100vw - 256px);
   }
 }
 
