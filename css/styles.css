@@ -602,6 +602,11 @@ header ul {
   max-width: 740px;
 }
 
+#aboutInfo form div {
+  max-width: 740px;
+  display: flex;
+}
+
 #aboutInfo form button {
   width: 100%;
   max-width: 100px;
@@ -843,7 +848,8 @@ header ul {
     grid-column: 1 / span 2;
   }
 
-  #aboutInfo form label {
+  #aboutInfo form label,
+  #aboutInfo form div {
     width: calc(100vw - 256px);
   }
 }
