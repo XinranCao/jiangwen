@@ -663,14 +663,10 @@ header ul {
   #aboutInfo span {
     display: block;
     margin: auto;
-    width: 60%;
-    min-width: 360px;
   }
 
   #aboutInfo form {
     margin: 32px auto 0;
-    width: 60%;
-    min-width: 360px;
   }
 
   #aboutInfo form button {
