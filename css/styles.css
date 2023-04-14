@@ -830,6 +830,15 @@ header ul {
 
   #aboutInfo {
     margin: 0 128px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #aboutInfo h1,
+  #aboutInfo p:first-of-type,
+  #aboutInfo span,
+  #aboutInfo form {
+    grid-column: 1 / span 2;
   }
 }
 
