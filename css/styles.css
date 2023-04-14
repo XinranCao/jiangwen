@@ -832,6 +832,7 @@ header ul {
     margin: 0 128px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
   }
 
   #aboutInfo h1,
